@@ -54,6 +54,7 @@ module.exports = {
         collapsable: true,
         children: [
           '/blogs/MyBatis/mybatis',
+          '/blogs/MyBatis/mybatis逆向工程'
         ]
       },
       {
@@ -61,6 +62,13 @@ module.exports = {
         collapsable: true,
         children: [
           '/blogs/MySQL/50道mysql练习题',
+        ]
+      },
+      {
+        title: 'Nginx',
+        collapsable: true,
+        children: [
+          '/blogs/Nginx/nginx',
         ]
       },
       {
@@ -96,6 +104,13 @@ module.exports = {
         collapsable: true,
         children: [
           '/blogs/SpringCloud/springcloud',
+        ]
+      },
+      {
+        title: '其他',
+        collapsable: true,
+        children: [
+          '/blogs/其他/VIP视频解析接口',
         ]
       },
       {
