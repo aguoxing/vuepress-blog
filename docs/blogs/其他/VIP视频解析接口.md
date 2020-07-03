@@ -146,7 +146,7 @@ vip视频在线解析： http://tv.dsqndh.com/
 
 唔哩表姐影院： http://t.cn/Rl5jCxS  （手机版）
 
-表姐影院： http://t.cn/RlcndxH  
+表姐影院： http://t.cn/RlcndxH 
 （手机版： http://t.cn/Rlcmwy5 ）
 
 口袋电影： http://yuxeq.cn/ （手机版）
@@ -159,7 +159,7 @@ B站（bilibili）： http://www.bilibili.com/
 
 人人字幕组： http://www.zimuzu.tv/ 
 天天美剧： http://www.ttmeiju.com/ 
-美剧天堂： http://www.meijutt.com/  
+美剧天堂： http://www.meijutt.com/ 
 电影天堂： http://www.xiaopian.com/ 
 飘花电影： http://www.piaohua.com/ 
 
@@ -170,10 +170,10 @@ B站（bilibili）： http://www.bilibili.com/
  电影FM： http://dianying.fm/category/ 
 资源片： http://ziyuanpian.com/  
 
- 丽丽影院： http://www.liliyy.com/  
+ 丽丽影院： http://www.liliyy.com/ 
 看看屋： http://www.kankanwu.com/ 
-迅雷好：  http://xunleihao.com/  
-Mp4吧： http://www.mp4ba.com/  
+迅雷好：  http://xunleihao.com/ 
+Mp4吧： http://www.mp4ba.com/ 
 搬运工： http://banyungong.net/  
 
  嘎嘎影视： http://www.gagays.com/  
@@ -184,7 +184,7 @@ Mp4吧： http://www.mp4ba.com/
 
   电影小二网： http://movie002.com/  
 
- 我爱P2P:  http://www.byhh.org/  
+ 我爱P2P:  http://www.byhh.org/ 
 电影首发站： http://www.dysfz.cc/ 
 阳光电影： http://www.ygdy8.com 
 SimpleCD： http://www.simplecd.me/ 
@@ -205,11 +205,11 @@ OA巴士： http://115.oa84.com/
 BT177： http://www.bt177.org/ 
 BT Kitty： http://btkitty.org/ 
 海盗湾： http://thepiratebay.ee/ 
-ulozto： http://www.ulozto.net/  
+ulozto： http://www.ulozto.net/ 
 rutracker： http://rutracker.org/forum/index.php 
-Btbook： http://t.cn/8sgPF9Q  
-BT樱桃： http://t.cn/8sh3oB3  
-RunBT： http://t.cn/Rvn5wDB  
+Btbook： http://t.cn/8sgPF9Q 
+BT樱桃： http://t.cn/8sh3oB3 
+RunBT： http://t.cn/Rvn5wDB 
 比特大雄：www.btdx8.com
 影视资源搜索类
 疯狂影视搜索： https://douc.cc/491N3X 
