@@ -99,10 +99,17 @@ module.exports = {
         ]
       },
       {
-        title: 'Vue',
+        title: '设计模式',
         collapsable: true,
         children: [
-          '/blogs/Vue/vue',
+          '/blogs/设计模式/23设计模式',
+        ]
+      },
+      {
+        title: '数据结构与算法',
+        collapsable: true,
+        children: [
+          '/blogs/数据结构与算法/数据结构与算法',
         ]
       }]
     },
