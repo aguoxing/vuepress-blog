@@ -173,7 +173,7 @@ Methods是vue实例中options的一个属性，和data平级，该属性用于�
 
 - View：View是作为视图模板，用于定义结构、布局。它自己不处理数据，只是将ViewModel中的数据展现出来。
 
-- ViewModel：ViewModel起着链接View和Model的作用，同时用于处理View中的逻辑。ViewModel从Model中取数据，渲染到View中。![MVVM](images/mvvm.png)
+- ViewModel：ViewModel起着链接View和Model的作用，同时用于处理View中的逻辑。ViewModel从Model中取数据，渲染到View中。![MVVM](/images/mvvm.png)
 
 #### 1.6.1 通过计数器分析MVVM
 
@@ -850,11 +850,11 @@ Vue官方建议，如果我们使用v-for去遍历一个对象、数组的话，
 
 ### 2.9 vue生命周期
 
-![1](images/1.png)
+![1](/images/1.png)
 
 
 
-![2](images/2.png)
+![2](/images/2.png)
 
 生命周期函数，是与data、methods平级的，并不是写到methods中。
 
@@ -880,7 +880,7 @@ Vue官方建议，如果我们使用v-for去遍历一个对象、数组的话，
 
 组件化是Vue的一个重要思想，它提供了一种抽象，让我们可以开发出一个个独立可复用的小组件来构建我们的应用。任何的应用都会被抽象成一颗组件树。
 
-![](images/3.png)
+![](/images/3.png)
 
 组件化开发的应用：
 
@@ -1912,15 +1912,15 @@ vue init webpack projectName
 
 vue create projectName
 
-![](images/4.png)
+![](/images/4.png)
 
-![](images/5.png)
+![](/images/5.png)
 
-![](images/6.png)
+![](/images/6.png)
 
-![](images/7.png)
+![](/images/7.png)
 
-![](images/8.png)
+![](/images/8.png)
 
 - 可视化界面创建
 
@@ -1930,7 +1930,7 @@ vue ui
 
 #### 6.4.2 目录结构
 
-![](images/9.png)
+![](/images/9.png)
 
 
 
@@ -2124,7 +2124,7 @@ new Vue({
 
 #### 7.2.4 创建路由组件
 
-![](images/10.png)
+![](/images/10.png)
 
 #### 7.2.5 配置路由
 
@@ -2790,7 +2790,7 @@ export default store
 
 module一般会在store文件夹下创建一个modules文件夹，使用js文件名作为module名称。
 
-![](images/11.png)
+![](/images/11.png)
 
 #### 9.3.8 module中的action（了解）
 
