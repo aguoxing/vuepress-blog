@@ -4,7 +4,7 @@ npm run docs:build
 # 生成静态文件后先推到master分支
 git add .
 git commit -m "update"
-git push -f git@github.com:aguoxing/vuepress-blog.git master
+git push origin
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
