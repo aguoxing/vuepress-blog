@@ -45,7 +45,8 @@ module.exports = {
         collapsable: true,
         children: [
           '/blogs/Linux/linux',
-          '/blogs/Linux/centos7'
+          '/blogs/Linux/centos7',
+          '/blogs/Linux/vim'
         ]
       },
       {
