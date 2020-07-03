@@ -2,9 +2,9 @@
 npm run docs:build
 
 # 生成静态文件后先推到master分支
-git add .
-git commit -m "update"
-git push origin
+# git add .
+# git commit -m "update"
+# git push origin
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
@@ -13,7 +13,7 @@ cd docs/.vuepress/dist
 echo 'xingzxc.xyz' > CNAME
 
 git init
-git add -A
+git add .
 git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io
