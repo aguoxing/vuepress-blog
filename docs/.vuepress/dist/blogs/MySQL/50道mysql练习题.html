@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>50道mysql练习题 | 文档</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.fd4c658b.css" as="style"><link rel="preload" href="/assets/js/app.d306419a.js" as="script"><link rel="preload" href="/assets/js/2.4826ac37.js" as="script"><link rel="preload" href="/assets/js/14.52ffd746.js" as="script"><link rel="prefetch" href="/assets/js/10.aa6d39bc.js"><link rel="prefetch" href="/assets/js/11.79b119ce.js"><link rel="prefetch" href="/assets/js/12.c9ea24f4.js"><link rel="prefetch" href="/assets/js/13.2462b2db.js"><link rel="prefetch" href="/assets/js/15.9a1e0fee.js"><link rel="prefetch" href="/assets/js/16.17790c4b.js"><link rel="prefetch" href="/assets/js/17.496464f8.js"><link rel="prefetch" href="/assets/js/18.2e3bd430.js"><link rel="prefetch" href="/assets/js/19.efb1fdd2.js"><link rel="prefetch" href="/assets/js/20.34087114.js"><link rel="prefetch" href="/assets/js/21.7aae9a7c.js"><link rel="prefetch" href="/assets/js/22.3235af14.js"><link rel="prefetch" href="/assets/js/3.da917fe1.js"><link rel="prefetch" href="/assets/js/4.2893cd85.js"><link rel="prefetch" href="/assets/js/5.f3352174.js"><link rel="prefetch" href="/assets/js/6.979386d1.js"><link rel="prefetch" href="/assets/js/7.d97f9da6.js"><link rel="prefetch" href="/assets/js/8.cf54eec0.js"><link rel="prefetch" href="/assets/js/9.908197ca.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.fd4c658b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blogs/" class="nav-link router-link-active">
+  文章
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="https://github.com/aguoxing" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blogs/" class="nav-link router-link-active">
+  文章
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于
+</a></div><div class="nav-item"><a href="https://github.com/aguoxing" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CentOS7</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Docker</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Dubbo</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Linux</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MyBatis</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>MySQL</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blogs/MySQL/50道mysql练习题.html" class="active sidebar-link">50道mysql练习题</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Redis</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Spring</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Spring MVC</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>SpringBoot</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>SpringCloud</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="建表"><a href="#建表" class="header-anchor">#</a> 建表</h3> <ul><li>学生表</li></ul> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>CREATE TABLE `Student`(
+`s_id` VARCHAR(20),
+`s_name` VARCHAR(20) NOT NULL DEFAULT '',
+`s_birth` VARCHAR(20) NOT NULL DEFAULT '',
+`s_sex` VARCHAR(10) NOT NULL DEFAULT '',
+PRIMARY KEY(`s_id`)
+);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ul><li>课程表</li></ul> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>CREATE TABLE `Course`(
+`c_id`  VARCHAR(20),
+`c_name` VARCHAR(20) NOT NULL DEFAULT '',
+`t_id` VARCHAR(20) NOT NULL,
+PRIMARY KEY(`c_id`)
+);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ul><li>教师表</li></ul> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>CREATE TABLE `Teacher`(
+`t_id` VARCHAR(20),
+`t_name` VARCHAR(20) NOT NULL DEFAULT '',
+PRIMARY KEY(`t_id`)
+);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ul><li>成绩表</li></ul> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>CREATE TABLE `Score`(
+`s_id` VARCHAR(20),
+`c_id`  VARCHAR(20),
+`s_score` INT(3),
+PRIMARY KEY(`s_id`,`c_id`)
+);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ul><li>插入学生表测试数据</li></ul> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>insert into Student values('01' , '赵雷' , '1990-01-01' , '男');
+insert into Student values('02' , '钱电' , '1990-12-21' , '男');
+insert into Student values('03' , '孙风' , '1990-05-20' , '男');
+insert into Student values('04' , '李云' , '1990-08-06' , '男');
+insert into Student values('05' , '周梅' , '1991-12-01' , '女');
+insert into Student values('06' , '吴兰' , '1992-03-01' , '女');
+insert into Student values('07' , '郑竹' , '1989-07-01' , '女');
+insert into Student values('08' , '王菊' , '1990-01-20' , '女');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><ul><li>课程表测试数据</li></ul> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>insert into Course values('01' , '语文' , '02');
+insert into Course values('02' , '数学' , '01');
+insert into Course values('03' , '英语' , '03');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>教师表测试数据</li></ul> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>insert into Teacher values('01' , '张三');
+insert into Teacher values('02' , '李四');
+insert into Teacher values('03' , '王五');
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>成绩表测试数据</li></ul> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>insert into Score values('01' , '01' , 80);
+insert into Score values('01' , '02' , 90);
+insert into Score values('01' , '03' , 99);
+insert into Score values('02' , '01' , 70);
+insert into Score values('02' , '02' , 60);
+insert into Score values('02' , '03' , 80);
+insert into Score values('03' , '01' , 80);
+insert into Score values('03' , '02' , 80);
+insert into Score values('03' , '03' , 80);
+insert into Score values('04' , '01' , 50);
+insert into Score values('04' , '02' , 30);
+insert into Score values('04' , '03' , 20);
+insert into Score values('05' , '01' , 76);
+insert into Score values('05' , '02' , 87);
+insert into Score values('06' , '01' , 31);
+insert into Score values('06' , '03' , 34);
+insert into Score values('07' , '02' , 89);
+insert into Score values('07' , '03' , 98);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h3 id="练习题和sql语句"><a href="#练习题和sql语句" class="header-anchor">#</a> 练习题和sql语句</h3> <ol><li>查询&quot;01&quot;课程比&quot;02&quot;课程成绩高的学生的信息及课程分数</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.*,b.s_score as 01_score,c.s_score as 02_score from student a,score b,score c 
+where a.s_id=b.s_id 
+and a.s_id=c.s_id 
+and b.c_id='01' 
+and c.c_id='02' 
+and b.s_score&gt;c.s_score
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ol start="2"><li>查询&quot;01&quot;课程比&quot;02&quot;课程成绩低的学生的信息及课程分数</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.* ,b.s_score as 01_score,c.s_score as 02_score from 
+student a left join score b on a.s_id=b.s_id and b.c_id='01' or b.c_id=NULL 
+join score c on a.s_id=c.s_id and c.c_id='02' where b.s_score&lt;c.s_score
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ol start="3"><li>查询平均成绩大于等于60分的同学的学生编号和学生姓名和平均成绩</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select b.s_id,b.s_name,ROUND(AVG(a.s_score),2) as avg_score from 
+student b 
+join score a on b.s_id = a.s_id
+GROUP BY b.s_id,b.s_name HAVING avg_score &gt;=60;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ol start="4"><li>查询平均成绩小于60分的同学的学生编号和学生姓名和平均成绩(包括有成绩的和无成绩的)</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select b.s_id,b.s_name,ROUND(AVG(a.s_score),2) as avg_score from 
+student b 
+left join score a on b.s_id = a.s_id
+GROUP BY b.s_id,b.s_name HAVING avg_score &lt;60
+union
+select a.s_id,a.s_name,0 as avg_score from 
+student a 
+where a.s_id not in (
+select distinct s_id from score);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><ol start="5"><li>查询所有同学的学生编号、学生姓名、选课总数、所有课程的总成绩</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.s_id,a.s_name,count(b.c_id) as sum_course,sum(b.s_score) as sum_score from 
+student a 
+left join score b on a.s_id=b.s_id
+GROUP BY a.s_id,a.s_name;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ol start="6"><li>查询&quot;李&quot;姓老师的数量</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select count(t_id) from teacher where t_name like '李%';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="7"><li>查询学过&quot;张三&quot;老师授课的同学的信息</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.* from 
+student a 
+join score b on a.s_id=b.s_id where b.c_id in(
+select c_id from course where t_id =(
+select t_id from teacher where t_name = '张三'));
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ol start="8"><li>查询没学过&quot;张三&quot;老师授课的同学的信息</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select * from 
+    student c 
+    where c.s_id not in(
+        select a.s_id from student a join score b on a.s_id=b.s_id where b.c_id in(
+        select a.c_id from course a join teacher b on a.t_id = b.t_id where t_name ='张三'));
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ol start="9"><li>查询学过编号为&quot;01&quot;并且也学过编号为&quot;02&quot;的课程的同学的信息</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.* from 
+student a,score b,score c 
+where a.s_id = b.s_id  and a.s_id = c.s_id and b.c_id='01' and c.c_id='02';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ol start="10"><li>查询学过编号为&quot;01&quot;但是没有学过编号为&quot;02&quot;的课程的同学的信息</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.* from 
+student a 
+where a.s_id in (select s_id from score where c_id='01' ) and a.s_id not in(select s_id from score where c_id='02')
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ol start="11"><li>查询没有学全所有课程的同学的信息</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>--@wendiepei的写法
+select s.* from student s 
+left join Score s1 on s1.s_id=s.s_id
+group by s.s_id having count(s1.c_id)&lt;(select count(*) from course)	
+--@k1051785839的写法
+select *
+from student
+where s_id not in(
+select s_id from score t1  
+group by s_id having count(*) =(select count(distinct c_id)  from course)) 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><ol start="12"><li>查询至少有一门课与学号为&quot;01&quot;的同学所学相同的同学的信息</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select * from student where s_id in(
+select distinct a.s_id from score a where a.c_id in(select a.c_id from score a where a.s_id='01')
+);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ol start="13"><li>查询和&quot;01&quot;号的同学学习的课程完全相同的其他同学的信息</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>--@ouyang_1993的写法
+SELECT
+ Student.*
+FROM
+ Student
+WHERE
+ s_id IN (SELECT s_id FROM Score GROUP BY s_id HAVING COUNT(s_id) = (
+    #下面的语句是找到'01'同学学习的课程数
+    SELECT COUNT(c_id) FROM Score WHERE s_id = '01'
+   )
+ )
+AND s_id NOT IN (
+ #下面的语句是找到学过‘01’同学没学过的课程，有哪些同学。并排除他们
+ SELECT s_id FROM Score
+ WHERE c_id IN(
+   #下面的语句是找到‘01’同学没学过的课程
+   SELECT DISTINCT c_id FROM Score
+   WHERE c_id NOT IN (
+     #下面的语句是找出‘01’同学学习的课程
+     SELECT c_id FROM Score WHERE s_id = '01'
+    )
+  ) GROUP BY s_id
+) #下面的条件是排除01同学
+AND s_id NOT IN ('01')
+--@k1051785839的写法
+SELECT
+ t3.*
+FROM
+ (
+  SELECT
+   s_id,
+   group_concat(c_id ORDER BY c_id) group1
+  FROM
+   score
+  WHERE
+   s_id &amp;lt;&gt; '01'
+  GROUP BY
+   s_id
+ ) t1
+INNER JOIN (
+ SELECT
+  group_concat(c_id ORDER BY c_id) group2
+ FROM
+  score
+ WHERE
+  s_id = '01'
+ GROUP BY
+  s_id
+) t2 ON t1.group1 = t2.group2
+INNER JOIN student t3 ON t1.s_id = t3.s_id
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br></div></div><ol start="14"><li>查询没学过&quot;张三&quot;老师讲授的任一门课程的学生姓名</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.s_name from student a where a.s_id not in (
+select s_id from score where c_id = 
+(select c_id from course where t_id =(
+select t_id from teacher where t_name = '张三')));
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ol start="15"><li>查询两门及其以上不及格课程的同学的学号，姓名及其平均成绩</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.s_id,a.s_name,ROUND(AVG(b.s_score)) from 
+student a 
+left join score b on a.s_id = b.s_id
+where a.s_id in(
+select s_id from score where s_score&lt;60 GROUP BY  s_id having count(1)&gt;=2)
+GROUP BY a.s_id,a.s_name
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ol start="16"><li>检索&quot;01&quot;课程分数小于60，按分数降序排列的学生信息</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.*,b.c_id,b.s_score from 
+student a,score b 
+where a.s_id = b.s_id and b.c_id='01' and b.s_score&lt;60 ORDER BY b.s_score DESC;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ol start="17"><li>按平均成绩从高到低显示所有学生的所有课程的成绩以及平均成绩</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.s_id,(select s_score from score where s_id=a.s_id and c_id='01') as 语文,
+(select s_score from score where s_id=a.s_id and c_id='02') as 数学,
+(select s_score from score where s_id=a.s_id and c_id='03') as 英语,
+round(avg(s_score),2) as 平均分 from score a  GROUP BY a.s_id ORDER BY 平均分 DESC;
+--@喝完这杯还有一箱的写法
+SELECT a.s_id,MAX(CASE a.c_id WHEN '01' THEN a.s_score END ) 语文, 
+MAX(CASE a.c_id WHEN '02' THEN a.s_score END ) 数学, 
+MAX(CASE a.c_id WHEN '03' THEN a.s_score END ) 英语, 
+avg(a.s_score),b.s_name FROM Score a JOIN Student b ON a.s_id=b.s_id GROUP BY a.s_id ORDER BY 5 DESC
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><ol start="18"><li>查询各科成绩最高分、最低分和平均分：以如下形式显示：课程ID，课程name，最高分，最低分，平均分，及格率，中等率，优良率，优秀率
+--及格为&gt;=60，中等为：70-80，优良为：80-90，优秀为：&gt;=90</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.c_id,b.c_name,MAX(s_score),MIN(s_score),ROUND(AVG(s_score),2),
+ROUND(100*(SUM(case when a.s_score&gt;=60 then 1 else 0 end)/SUM(case when a.s_score then 1 else 0 end)),2) as 及格率,
+ROUND(100*(SUM(case when a.s_score&gt;=70 and a.s_score&lt;=80 then 1 else 0 end)/SUM(case when a.s_score then 1 else 0 end)),2) as 中等率,
+ROUND(100*(SUM(case when a.s_score&gt;=80 and a.s_score&lt;=90 then 1 else 0 end)/SUM(case when a.s_score then 1 else 0 end)),2) as 优良率,
+ROUND(100*(SUM(case when a.s_score&gt;=90 then 1 else 0 end)/SUM(case when a.s_score then 1 else 0 end)),2) as 优秀率
+from score a left join course b on a.c_id = b.c_id GROUP BY a.c_id,b.c_name
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ol start="19"><li>按各科成绩进行排序，并显示排名</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>-- mysql没有rank函数
+select a.s_id,a.c_id,
+        @i:=@i +1 as i保留排名,
+        @k:=(case when @score=a.s_score then @k else @i end) as rank不保留排名,
+        @score:=a.s_score as score
+    from (
+        select s_id,c_id,s_score from score GROUP BY s_id,c_id,s_score ORDER BY s_score DESC
+    )a,(select @k:=0,@i:=0,@score:=0)s
+--@k1051785839的写法
+(select * from (select 
+                t1.c_id,
+                t1.s_score,
+                (select count(distinct t2.s_score) from score t2 where t2.s_score&gt;=t1.s_score and t2.c_id='01') rank
+                FROM score t1 where t1.c_id='01'
+                order by t1.s_score desc) t1)
+union
+(select * from (select 
+                t1.c_id,
+                t1.s_score,
+                (select count(distinct t2.s_score) from score t2 where t2.s_score&gt;=t1.s_score and t2.c_id='02') rank
+                FROM score t1 where t1.c_id='02'
+                order by t1.s_score desc) t2)
+union
+(select * from (select 
+                t1.c_id,
+                t1.s_score,
+                (select count(distinct t2.s_score) from score t2 where t2.s_score&gt;=t1.s_score and t2.c_id='03') rank
+                FROM score t1 where t1.c_id='03'
+                order by t1.s_score desc) t3)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><ol start="20"><li>查询学生的总成绩并进行排名</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.s_id,
+@i:=@i+1 as i,
+@k:=(case when @score=a.sum_score then @k else @i end) as rank,
+@score:=a.sum_score as score
+from (select s_id,SUM(s_score) as sum_score from score GROUP BY s_id ORDER BY sum_score DESC)a,
+(select @k:=0,@i:=0,@score:=0)s
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ol start="21"><li>查询不同老师所教不同课程平均分从高到低显示</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.t_id,c.t_name,a.c_id,ROUND(avg(s_score),2) as avg_score from course a
+left join score b on a.c_id=b.c_id 
+left join teacher c on a.t_id=c.t_id
+GROUP BY a.c_id,a.t_id,c.t_name ORDER BY avg_score DESC;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ol start="22"><li>查询所有课程的成绩第2名到第3名的学生信息及该课程成绩</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select d.*,c.排名,c.s_score,c.c_id from (
+                select a.s_id,a.s_score,a.c_id,@i:=@i+1 as 排名 from score a,(select @i:=0)s where a.c_id='01'  
+ORDER BY a.s_score DESC  
+            )c
+            left join student d on c.s_id=d.s_id
+            where 排名 BETWEEN 2 AND 3
+            UNION
+            select d.*,c.排名,c.s_score,c.c_id from (
+                select a.s_id,a.s_score,a.c_id,@j:=@j+1 as 排名 from score a,(select @j:=0)s where a.c_id='02'  
+ORDER BY a.s_score DESC
+            )c
+            left join student d on c.s_id=d.s_id
+            where 排名 BETWEEN 2 AND 3
+            UNION
+            select d.*,c.排名,c.s_score,c.c_id from (
+                select a.s_id,a.s_score,a.c_id,@k:=@k+1 as 排名 from score a,(select @k:=0)s where a.c_id='03' 
+ORDER BY a.s_score DESC
+            )c
+            left join student d on c.s_id=d.s_id
+            where 排名 BETWEEN 2 AND 3;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><ol start="23"><li>统计各科成绩各分数段人数：课程编号,课程名称,[100-85],[85-70],[70-60],[0-60]及所占百分比</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select distinct f.c_name,a.c_id,b.`85-100`,b.百分比,c.`70-85`,c.百分比,d.`60-70`,d.百分比,e.`0-60`,e.百分比 from score a
+left join (select c_id,SUM(case when s_score &gt;85 and s_score &lt;=100 then 1 else 0 end) as `85-100`,
+ROUND(100*(SUM(case when s_score &gt;85 and s_score &lt;=100 then 1 else 0 end)/count(*)),2) as 百分比
+from score GROUP BY c_id)b on a.c_id=b.c_id
+left join (select c_id,SUM(case when s_score &gt;70 and s_score &lt;=85 then 1 else 0 end) as `70-85`,
+ROUND(100*(SUM(case when s_score &gt;70 and s_score &lt;=85 then 1 else 0 end)/count(*)),2) as 百分比
+from score GROUP BY c_id)c on a.c_id=c.c_id
+left join (select c_id,SUM(case when s_score &gt;60 and s_score &lt;=70 then 1 else 0 end) as `60-70`,
+ROUND(100*(SUM(case when s_score &gt;60 and s_score &lt;=70 then 1 else 0 end)/count(*)),2) as 百分比
+from score GROUP BY c_id)d on a.c_id=d.c_id
+left join (select c_id,SUM(case when s_score &gt;=0 and s_score &lt;=60 then 1 else 0 end) as `0-60`,
+ROUND(100*(SUM(case when s_score &gt;=0 and s_score &lt;=60 then 1 else 0 end)/count(*)),2) as 百分比
+from score GROUP BY c_id)e on a.c_id=e.c_id
+left join course f on a.c_id = f.c_id
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><ol start="24"><li>查询学生平均成绩及其名次</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.s_id,
+@i:=@i+1 as '不保留空缺排名',
+@k:=(case when @avg_score=a.avg_s then @k else @i end) as '保留空缺排名',
+@avg_score:=avg_s as '平均分'
+from (select s_id,ROUND(AVG(s_score),2) as avg_s from score GROUP BY s_id ORDER BY avg_s DESC)a,(select @avg_score:=0,@i:=0,@k:=0)b;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ol start="25"><li>查询各科成绩前三名的记录</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>-- 1.选出b表比a表成绩大的所有组
+-- 2.选出比当前id成绩大的 小于三个的
+select a.s_id,a.c_id,a.s_score from score a 
+left join score b on a.c_id = b.c_id and a.s_score&lt;b.s_score
+group by a.s_id,a.c_id,a.s_score HAVING COUNT(b.s_id)&lt;3
+ORDER BY a.c_id,a.s_score DESC
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ol start="26"><li>查询每门课程被选修的学生数</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select c_id,count(s_id) from score a GROUP BY c_id
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="27"><li>查询出只有两门课程的全部学生的学号和姓名</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select s_id,s_name from student where s_id in(
+select s_id from score GROUP BY s_id HAVING COUNT(c_id)=2);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="28"><li>查询男生、女生人数</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select s_sex,COUNT(s_sex) as 人数  from student GROUP BY s_sex
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="29"><li>查询名字中含有&quot;风&quot;字的学生信息</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select * from student where s_name like '%风%';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="30"><li>查询同名同性学生名单，并统计同名人数</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.s_name,a.s_sex,count(*) from student a  JOIN 
+student b on a.s_id !=b.s_id and a.s_name = b.s_name and a.s_sex = b.s_sex
+GROUP BY a.s_name,a.s_sex
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ol start="31"><li>查询1990年出生的学生名单</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select * from student where YEAR(student.s_birth)=1990
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select s_name from student where s_birth like '1990%'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="32"><li>查询每门课程的平均成绩，结果按平均成绩降序排列，平均成绩相同时，按课程编号升序排列</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select c_id,ROUND(AVG(s_score),2) as avg_score from score GROUP BY c_id ORDER BY avg_score DESC,c_id ASC
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="33"><li>查询平均成绩大于等于85的所有学生的学号、姓名和平均成绩</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.s_id,b.s_name,ROUND(avg(a.s_score),2) as avg_score from score a
+left join student b on a.s_id=b.s_id GROUP BY s_id HAVING avg_score&gt;=85
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="34"><li>查询课程名称为&quot;数学&quot;，且分数低于60的学生姓名和分数</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.s_name,b.s_score from score b join student a on a.s_id=b.s_id where b.c_id=(
+select c_id from course where c_name ='数学') and b.s_score&lt;60
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="35"><li>查询所有学生的课程及分数情况；</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.s_id,a.s_name,
+SUM(case c.c_name when '语文' then b.s_score else 0 end) as '语文',
+SUM(case c.c_name when '数学' then b.s_score else 0 end) as '数学',
+SUM(case c.c_name when '英语' then b.s_score else 0 end) as '英语',
+SUM(b.s_score) as  '总分'
+from student a left join score b on a.s_id = b.s_id 
+left join course c on b.c_id = c.c_id 
+GROUP BY a.s_id,a.s_name
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><ol start="36"><li>查询任何一门课程成绩在70分以上的姓名、课程名称和分数；</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.s_name,b.c_name,c.s_score from course b left join score c on b.c_id = c.c_id
+left join student a on a.s_id=c.s_id where c.s_score&gt;=70
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="37"><li>查询不及格的课程</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.s_id,a.c_id,b.c_name,a.s_score from score a left join course b on a.c_id = b.c_id
+where a.s_score&lt;60 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="38"><li>查询课程编号为01且课程成绩在80分以上的学生的学号和姓名；</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.s_id,b.s_name from score a LEFT JOIN student b on a.s_id = b.s_id
+where a.c_id = '01'and a.s_score&gt;80
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="39"><li>求每门课程的学生人数</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select count(*) from score GROUP BY c_id;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="40"><li>查询选修&quot;张三&quot;老师所授课程的学生中，成绩最高的学生信息及其成绩</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>-- 查询老师id	
+select c_id from course c,teacher d where c.t_id=d.t_id and d.t_name='张三'
+-- 查询最高分（可能有相同分数）
+select MAX(s_score) from score where c_id='02'
+-- 查询信息
+select a.*,b.s_score,b.c_id,c.c_name from student a
+LEFT JOIN score b on a.s_id = b.s_id
+LEFT JOIN course c on b.c_id=c.c_id
+where b.c_id =(select c_id from course c,teacher d where c.t_id=d.t_id and d.t_name='张三')
+and b.s_score in (select MAX(s_score) from score where c_id='02')
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><ol start="41"><li>查询不同课程成绩相同的学生的学生编号、课程编号、学生成绩</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select DISTINCT b.s_id,b.c_id,b.s_score from score a,score b where a.c_id != b.c_id and a.s_score = b.s_score
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="42"><li>查询每门功成绩最好的前两名</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select a.s_id,a.c_id,a.s_score from score a
+where (select COUNT(1) from score b where b.c_id=a.c_id and b.s_score&gt;=a.s_score)&lt;=2 ORDER BY a.c_id
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="43"><li>统计每门课程的学生选修人数（超过5人的课程才统计）。要求输出课程号和选修人数，查询结果按人数降序排列，若人数相同，按课程号升序排列</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select c_id,count(*) as total from score GROUP BY c_id HAVING total&gt;5 ORDER BY total,c_id ASC
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="44"><li>检索至少选修两门课程的学生学号</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select s_id,count(*) as sel from score GROUP BY s_id HAVING sel&gt;=2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="45"><li>查询选修了全部课程的学生信息</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select * from student where s_id in(		
+select s_id from score GROUP BY s_id HAVING count(*)=(select count(*) from course))
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="46"><li>查询各学生的年龄</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>SELECT stu.s_name,TIMESTAMPDIFF(YEAR,stu.s_birth,CURDATE()) as '年龄' from student stu
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-mysql line-numbers-mode"><pre class="language-text"><code># 按照出生日期来算，当前月日 &lt; 出生年月的月日则，年龄减一
+select s_birth,(DATE_FORMAT(NOW(),'%Y')-DATE_FORMAT(s_birth,'%Y') - 
+(case when DATE_FORMAT(NOW(),'%m%d')&gt;DATE_FORMAT(s_birth,'%m%d') then 0 else 1 end)) as age
+from student;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ol start="47"><li>查询本周过生日的学生</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select * from student where WEEK(DATE_FORMAT(NOW(),'%Y%m%d'))=WEEK(s_birth)
+select * from student where YEARWEEK(s_birth)=YEARWEEK(DATE_FORMAT(NOW(),'%Y%m%d'))
+	
+select WEEK(DATE_FORMAT(NOW(),'%Y%m%d'))
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ol start="48"><li>查询下周过生日的学生</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select * from student where WEEK(DATE_FORMAT(NOW(),'%Y%m%d'))+1 =WEEK(s_birth)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="49"><li>查询本月过生日的学生</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select * from student where MONTH(DATE_FORMAT(NOW(),'%Y%m%d')) =MONTH(s_birth)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="50"><li>查询下月过生日的学生</li></ol> <div class="language-mysql line-numbers-mode"><pre class="language-text"><code>select * from student where MONTH(DATE_FORMAT(NOW(),'%Y%m%d'))+1 =MONTH(s_birth)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新:</span> <span class="time">7/3/2020, 1:56:24 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blogs/MyBatis/mybatis.html" class="prev">
+        Linux
+      </a></span> <span class="next"><a href="/blogs/Redis/redis.html">
+        redis
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d306419a.js" defer></script><script src="/assets/js/2.4826ac37.js" defer></script><script src="/assets/js/14.52ffd746.js" defer></script>
+  </body>
+</html>
