@@ -12,13 +12,6 @@ module.exports = {
     ],
     sidebar: {
       '/blogs/': [{
-        title: 'CentOS7',
-        collapsable: true,
-        children: [
-          '/blogs/CentOS7/centos7',
-        ]
-      },
-      {
         title: 'Docker',
         collapsable: true,
         children: [
@@ -52,6 +45,7 @@ module.exports = {
         collapsable: true,
         children: [
           '/blogs/Linux/linux',
+          '/blogs/Linux/centos7'
         ]
       },
       {
