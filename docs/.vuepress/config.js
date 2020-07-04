@@ -13,7 +13,14 @@ module.exports = {
       { text: '首页', link: '/' },
       { text: '文章', link: '/blogs/' },
       { text: '关于', link: '/about/' },
-      { text: 'GitHub', link: 'https://github.com/aguoxing' },
+      {
+        text: '链接',
+        items: [
+          { text: 'GitHub', link: 'https://github.com/aguoxing' },
+          { text: 'Gitee', link: 'https://gitee.com/aguoxing' },
+          { text: 'QQ', link: 'http://sighttp.qq.com/authd?IDKEY=73a6878f272caac4245dce5ad8e38afa940eb94ca6128183' }
+        ]
+      }
     ],
     sidebar: {
       '/blogs/': [{
