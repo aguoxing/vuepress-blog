@@ -2,7 +2,7 @@
 home: true
 heroImage: /images/2.jpg
 heroText: JavaDoc
-tagline: 不想搞Java了 要饿死了
+tagline: 难道我学过如来神掌也要说给你听吗？
 actionText: 快速上手 →
 actionLink: https://www.vuepress.cn/
 features:
