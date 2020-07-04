@@ -3,6 +3,8 @@ title: VIP视频解析接口
 ---
 
 - https://jx.km58.top/jx/?url=
+
+- https://jx.km58.top/jx/?url=
 - https://jx.000180.top/jx/?url=
 - https://cdn.yangju.vip/k/?url=
 - https://api.653520.top/vip/?url=

@@ -50,6 +50,13 @@ module.exports = {
         ]
       },
       {
+        title: 'MQ',
+        collapsable: true,
+        children: [
+          '/blogs/MQ/消息队列',
+        ]
+      },
+      {
         title: 'MyBatis',
         collapsable: true,
         children: [
