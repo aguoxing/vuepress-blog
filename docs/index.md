@@ -2,9 +2,10 @@
 home: true
 heroImage: /images/2.jpg
 heroText: JavaDoc
+tagline: 
 actionText: 快速上手 →
 actionLink: https://www.vuepress.cn/
-features:
+features: 不想搞Java了 要饿死了
 - title: 简洁至上
   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
 - title: Vue驱动
