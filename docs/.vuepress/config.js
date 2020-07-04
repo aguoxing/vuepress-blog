@@ -1,9 +1,14 @@
 module.exports = {
-  title: '文档',
+  title: 'JavaDoc',
+  description: 'Java程序员的自我修养',
   markdown: {
     lineNumbers: true
   },
   themeConfig: {
+    lastUpdated: 'Last Update',
+    // sidebarDepth: 4, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
+    displayAllHeaders: true, // 默认值：false
+    activeHeaderLinks: false, // 默认值：true
     nav: [
       { text: '首页', link: '/' },
       { text: '文章', link: '/blogs/' },
@@ -134,9 +139,6 @@ module.exports = {
           '/blogs/数据结构与算法/数据结构与算法',
         ]
       }]
-    },
-    lastUpdated: '最近更新',
-    displayAllHeaders: true, // 默认值：false
-    activeHeaderLinks: false, // 默认值：true
+    }
   }
 }
