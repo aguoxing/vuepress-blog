@@ -125,6 +125,20 @@ module.exports = {
           '/blogs/SpringCloud/springcloud',
         ]
       },
+	  {
+        title: 'Vue',
+        collapsable: true,
+        children: [
+          '/blogs/Vue/vue',
+        ]
+      },
+	  {
+        title: 'Windows',
+        collapsable: true,
+        children: [
+          '/blogs/Windows/notepad++',
+        ]
+      },
       {
         title: '其他',
         collapsable: true,
