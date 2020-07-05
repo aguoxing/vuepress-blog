@@ -146,6 +146,13 @@ module.exports = {
           '/blogs/其他/VIP视频解析接口',
         ]
       },
+	  {
+        title: 'Zookeeper',
+        collapsable: true,
+        children: [
+          '/blogs/Zookeeper/zookeeper分布式锁',
+        ]
+      },
       {
         title: '设计模式',
         collapsable: true,
