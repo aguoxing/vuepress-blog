@@ -19,7 +19,7 @@ title: java面试题
 
 基本类型：比较的是值是否相同；
 引用类型：比较的是引用是否相同；
- 代码示例：
+代码示例：
 
 ```java
 String x = "string";
@@ -112,7 +112,7 @@ public boolean equals(Object anObject) {
 
 原来是 String 重写了 Object 的 equals 方法，把引用比较改成了值比较。
 
-总结 ：== 对于基本类型来说是值比较，对于引用类型来说是比较的是引用；而 equals 默认情况下是引用比较，只是很多类重新了 equals 方法，比如 String、Integer 等把它变成了值比较，所以一般情况下 equals 比较的是值是否相等。
+> 总结 ：== 对于基本类型来说是值比较，对于引用类型来说是比较的是引用；而 equals 默认情况下是引用比较，只是很多类重新了 equals 方法，比如 String、Integer 等把它变成了值比较，所以一般情况下 equals 比较的是值是否相等。
 
 #### 3、两个对象的 hashCode() 相同，则 equals() 也一定为 true，对吗？
 
@@ -136,9 +136,9 @@ false
 
 #### 4、final 在 Java 中有什么作用？
 
- final 修饰的类叫最终类，该类不能被继承。
- final 修饰的方法不能被重写。
- final 修饰的变量叫常量，常量必须初始化，初始化之后值就不能被修改。
+- final 修饰的类叫最终类，该类不能被继承。
+- final 修饰的方法不能被重写。
+- final 修饰的变量叫常量，常量必须初始化，初始化之后值就不能被修改。
 
 ####  5、Java 中的 Math. round(-1. 5) 等于多少？
 
@@ -190,17 +190,17 @@ System.out.println(stringBuilder. reverse()); // gfedcba
 
 #### 10、String 类的常用方法都有那些？
 
- indexOf()：返回指定字符的索引。
- charAt()：返回指定索引处的字符。
- replace()：字符串替换。
- trim()：去除字符串两端空白。
- split()：分割字符串，返回一个分割后的字符串数组。
- getBytes()：返回字符串的 byte 类型数组。
- length()：返回字符串长度。
- toLowerCase()：将字符串转成小写字母。
- toUpperCase()：将字符串转成大写字符。
- substring()：截取字符串。
- equals()：字符串比较。
+- indexOf()：返回指定字符的索引。
+- charAt()：返回指定索引处的字符。
+- replace()：字符串替换。
+- trim()：去除字符串两端空白。
+- split()：分割字符串，返回一个分割后的字符串数组。
+- getBytes()：返回字符串的 byte 类型数组。
+- length()：返回字符串长度。
+- toLowerCase()：将字符串转成小写字母。
+- toUpperCase()：将字符串转成大写字符。
+- substring()：截取字符串。
+- equals()：字符串比较。
 
 #### 11、抽象类必须要有抽象方法吗？
 
@@ -254,37 +254,49 @@ abstract class Cat {
 
 #### 17、Files的常用方法都有哪些？
 
- Files. exists()：检测文件路径是否存在。
- Files. createFile()：创建文件。
- Files. createDirectory()：创建文件夹。
- Files. delete()：删除一个文件或目录。
- Files. copy()：复制文件。
- Files. move()：移动文件。
- Files. size()：查看文件个数。
- Files. read()：读取文件。
- Files. write()：写入文件。
- 容器
+- Files. exists()：检测文件路径是否存在。
+- Files. createFile()：创建文件。
+- Files. createDirectory()：创建文件夹。
+- Files. delete()：删除一个文件或目录。
+- Files. copy()：复制文件。
+- Files. move()：移动文件。
+- Files. size()：查看文件个数。
+- Files. read()：读取文件。
+- Files. write()：写入文件。
+
+###  容器
 
 #### 18、Java 容器都有哪些？
 
- Java 容器分为 Collection 和 Map 两大类，其下又有很多子类，如下所示：
+Java 容器分为 Collection 和 Map 两大类，其下又有很多子类，如下所示：
 
-Collection
- List
- ArrayList
- LinkedList
- Vector
- Stack
- Set
- HashSet
- LinkedHashSet
- TreeSet
- Map
- HashMap
- LinkedHashMap
- TreeMap
- ConcurrentHashMap
- Hashtable
+- Collection
+
+  - List
+
+  - ArrayList
+
+  - LinkedList
+
+  - Vector
+
+  - Stack
+
+  - Set
+
+  - HashSet
+
+  - LinkedHashSet
+
+  - TreeSet
+
+- Map
+
+  - HashMap
+  - LinkedHashMap
+  - TreeMap
+  - ConcurrentHashMap
+  - Hashtable
 
 ####  19、Collection 和 Collections 有什么区别？
 
@@ -388,9 +400,9 @@ Iterator 的特点是更加安全，因为它可以确保，在当前遍历的�
 
 #### 33、Iterator 和 ListIterator 有什么区别？
 
- Iterator 可以遍历 Set 和 List 集合，而 ListIterator 只能遍历 List。
- Iterator 只能单向遍历，而 ListIterator 可以双向遍历（向前/后遍历）。
- ListIterator 从 Iterator 接口继承，然后添加了一些额外的功能，比如添加一个元素、替换一个元素、获取前面或后面元素的索引位置。
+- Iterator 可以遍历 Set 和 List 集合，而 ListIterator 只能遍历 List。
+- Iterator 只能单向遍历，而 ListIterator 可以双向遍历（向前/后遍历）。
+- ListIterator 从 Iterator 接口继承，然后添加了一些额外的功能，比如添加一个元素、替换一个元素、获取前面或后面元素的索引位置。
 
 #### 34、怎么确保一个集合不能被修改？
 
@@ -432,9 +444,9 @@ System.out.println(list. size());
 
 创建线程有三种方式：
 
-继承 Thread 重写 run 方法；
-实现 Runnable 接口；
-实现 Callable 接口。
+1. 继承 Thread 重写 run 方法；
+2. 实现 Runnable 接口；
+3. 实现 Callable 接口。
 
 #### 39、说一下 runnable 和 callable 有什么区别？
 
@@ -444,18 +456,18 @@ runnable 没有返回值，callable 可以拿到有返回值，callable 可以�
 
 线程的状态：
 
-NEW 尚未启动
-RUNNABLE 正在执行中
-BLOCKED 阻塞的（被同步锁或者IO锁阻塞）
-WAITING 永久等待状态
-TIMED_WAITING 等待指定的时间重新被唤醒的状态
-TERMINATED 执行完成
+1. NEW 尚未启动
+2. RUNNABLE 正在执行中
+3. BLOCKED 阻塞的（被同步锁或者IO锁阻塞）
+4. WAITING 永久等待状态
+5. TIMED_WAITING 等待指定的时间重新被唤醒的状态
+6. TERMINATED 执行完成
 
 #### 41、sleep() 和 wait() 有什么区别？
 
-类的不同：sleep() 来自 Thread，wait() 来自 Object。
-释放锁：sleep() 不释放锁；wait() 释放锁。
-用法不同：sleep() 时间到会自动恢复；wait() 可以使用 notify()/notifyAll()直接唤醒。
+- 类的不同：sleep() 来自 Thread，wait() 来自 Object。
+- 释放锁：sleep() 不释放锁；wait() 释放锁。
+- 用法不同：sleep() 时间到会自动恢复；wait() 可以使用 notify()/notifyAll()直接唤醒。
 
 #### 42、notify()和 notifyAll()有什么区别？
 
@@ -469,40 +481,42 @@ start() 方法用于启动线程，run() 方法用于执行线程的运行时代
 
 线程池创建有七种方式，最核心的是最后一种：
 
-newSingleThreadExecutor()：它的特点在于工作线程数目被限制为 1，操作一个无界的工作队列，所以它保证了所有任务的都是被顺序执行，最多会有一个任务处于活动状态，并且不允许使用者改动线程池实例，因此可以避免其改变线程数目；
+1. newSingleThreadExecutor()：它的特点在于工作线程数目被限制为 1，操作一个无界的工作队列，所以它保证了所有任务的都是被顺序执行，最多会有一个任务处于活动状态，并且不允许使用者改动线程池实例，因此可以避免其改变线程数目；
+2. newCachedThreadPool()：它是一种用来处理大量短时间工作任务的线程池，具有几个鲜明特点：它会试图缓存线程并重用，当无缓存线程可用时，就会创建新的工作线程；如果线程闲置的时间超过 60 秒，则被终止并移出缓存；长时间闲置时，这种线程池，不会消耗什么资源。其内部使用SynchronousQueue 作为工作队列；
 
-newCachedThreadPool()：它是一种用来处理大量短时间工作任务的线程池，具有几个鲜明特点：它会试图缓存线程并重用，当无缓存线程可用时，就会创建新的工作线程；如果线程闲置的时间超过 60 秒，则被终止并移出缓存；长时间闲置时，这种线程池，不会消耗什么资源。其内部使用 SynchronousQueue 作为工作队列；
+3. newFixedThreadPool(int nThreads)：重用指定数目（nThreads）的线程，其背后使用的是无界的工作队列，任何时候最多有 nThreads 个工作线程是活动的。这意味着，如果任务数量超过了活动队列数目，将在工作队列中等待空闲线程出现；如果有工作线程退出，将会有新的工作线程被创建，以补足指定的数目 nThreads；
 
-newFixedThreadPool(int nThreads)：重用指定数目（nThreads）的线程，其背后使用的是无界的工作队列，任何时候最多有 nThreads 个工作线程是活动的。这意味着，如果任务数量超过了活动队列数目，将在工作队列中等待空闲线程出现；如果有工作线程退出，将会有新的工作线程被创建，以补足指定的数目 nThreads；
+4. newSingleThreadScheduledExecutor()：创建单线程池，返回 ScheduledExecutorService，可以进行定时或周期性的工作调度；
 
-newSingleThreadScheduledExecutor()：创建单线程池，返回 ScheduledExecutorService，可以进行定时或周期性的工作调度；
+5. newScheduledThreadPool(int corePoolSize)：和newSingleThreadScheduledExecutor()类似，创建的是个 ScheduledExecutorService，可以进行定时或周期性的工作调度，区别在于单一工作线程还是多个工作线程；
 
-newScheduledThreadPool(int corePoolSize)：和newSingleThreadScheduledExecutor()类似，创建的是个 ScheduledExecutorService，可以进行定时或周期性的工作调度，区别在于单一工作线程还是多个工作线程；
+6. newWorkStealingPool(int parallelism)：这是一个经常被人忽略的线程池，Java 8 才加入这个创建方法，其内部会构建ForkJoinPool，利用Work-Stealing算法，并行地处理任务，不保证处理顺序；
 
-newWorkStealingPool(int parallelism)：这是一个经常被人忽略的线程池，Java 8 才加入这个创建方法，其内部会构建ForkJoinPool，利用Work-Stealing算法，并行地处理任务，不保证处理顺序；
-
-ThreadPoolExecutor()：是最原始的线程池创建，上面1-3创建方式都是对ThreadPoolExecutor的封装。
+7. ThreadPoolExecutor()：是最原始的线程池创建，上面1-3创建方式都是对ThreadPoolExecutor的封装。
 
 #### 45、线程池都有哪些状态？
 
-RUNNING：这是最正常的状态，接受新的任务，处理等待队列中的任务。
-SHUTDOWN：不接受新的任务提交，但是会继续处理等待队列中的任务。
-STOP：不接受新的任务提交，不再处理等待队列中的任务，中断正在执行任务的线程。
-TIDYING：所有的任务都销毁了，workCount 为 0，线程池的状态在转换为 TIDYING 状态时，会执行钩子方法 terminated()。
-TERMINATED：terminated()方法结束后，线程池的状态就会变成这个。
+- RUNNING：这是最正常的状态，接受新的任务，处理等待队列中的任务。
+- SHUTDOWN：不接受新的任务提交，但是会继续处理等待队列中的任务。
+- STOP：不接受新的任务提交，不再处理等待队列中的任务，中断正在执行任务的线程。
+- TIDYING：所有的任务都销毁了，workCount 为 0，线程池的状态在转换为 TIDYING 状态时，会执行钩子方法 terminated()。
+- TERMINATED：terminated()方法结束后，线程池的状态就会变成这个。
 
 #### 46、线程池中 submit() 和 execute() 方法有什么区别？
 
-execute()：只能执行 Runnable 类型的任务。
-submit()：可以执行 Runnable 和 Callable 类型的任务。
-Callable 类型的任务可以获取执行的返回值，而 Runnable 执行无返回值。
+- execute()：只能执行 Runnable 类型的任务。
+- submit()：可以执行 Runnable 和 Callable 类型的任务。
+- Callable 类型的任务可以获取执行的返回值，而 Runnable 执行无返回值。
 
 #### 47、在 Java 程序中怎么保证多线程的运行安全？
 
-方法一：使用安全类，比如 Java. util. concurrent 下的类。
-方法二：使用自动锁 synchronized。
-方法三：使用手动锁 Lock。
-手动锁 Java 示例代码如下：
+- 方法一：使用安全类，比如 Java. util. concurrent 下的类。
+
+- 方法二：使用自动锁 synchronized。
+
+- 方法三：使用手动锁 Lock。
+
+  手动锁 Java 示例代码如下：
 
 ```java
 Lock lock = new ReentrantLock();
@@ -542,7 +556,11 @@ ThreadLocal 的经典使用场景是数据库连接和 session 管理等。
 
 #### 52、说一下 synchronized 底层实现原理？
 
-synchronized 是由一对 monitorenter/monitorexit 指令实现的，monitor 对象是同步的基本实现单元。在 Java 6 之前，monitor 的实现完全是依靠操作系统内部的互斥锁，因为需要进行用户态到内核态的切换，所以同步操作是一个无差别的重量级操作，性能也很低。但在 Java 6 的时候，Java 虚拟机 对此进行了大刀阔斧地改进，提供了三种不同的 monitor 实现，也就是常说的三种不同的锁：偏向锁（Biased Locking）、轻量级锁和重量级锁，大大改进了其性能。
+synchronized 是由一对 monitorenter/monitorexit 指令实现的，monitor 对象是同步的基本实现单元。
+
+在 Java 6 之前，monitor 的实现完全是依靠操作系统内部的互斥锁，因为需要进行用户态到内核态的切换，所以同步操作是一个无差别的重量级操作，性能也很低。
+
+但在 Java 6 的时候，Java 虚拟机 对此进行了大刀阔斧地改进，提供了三种不同的 monitor 实现，也就是常说的三种不同的锁：偏向锁（Biased Locking）、轻量级锁和重量级锁，大大改进了其性能。
 
 #### 53、synchronized 和 volatile 的区别是什么？
 
@@ -562,10 +580,10 @@ synchronized 早期的实现比较低效，对比 ReentrantLock，大多数场�
 
 主要区别如下：
 
-ReentrantLock 使用起来比较灵活，但是必须有释放锁的配合动作；
-ReentrantLock 必须手动获取与释放锁，而 synchronized 不需要手动释放和开启锁；
-ReentrantLock 只适用于代码块锁，而 synchronized 可用于修饰方法、代码块等。
-volatile 标记的变量不会被编译器优化；synchronized 标记的变量可以被编译器优化。
+- ReentrantLock 使用起来比较灵活，但是必须有释放锁的配合动作；
+- ReentrantLock 必须手动获取与释放锁，而 synchronized 不需要手动释放和开启锁；
+- ReentrantLock 只适用于代码块锁，而 synchronized 可用于修饰方法、代码块等。
+- volatile 标记的变量不会被编译器优化；synchronized 标记的变量可以被编译器优化。
 
 #### 56、说一下 atomic 的原理？
 
@@ -623,29 +641,29 @@ JSP 是 servlet 技术的扩展，本质上就是 servlet 的简易方式。serv
 
  JSP 有 9 大内置对象：
 
-request：封装客户端的请求，其中包含来自 get 或 post 请求的参数；
-response：封装服务器对客户端的响应；
-pageContext：通过该对象可以获取其他对象；
-session：封装用户会话的对象；
-application：封装服务器运行环境的对象；
-out：输出服务器响应的输出流对象；
-config：Web 应用的配置对象；
-page：JSP 页面本身（相当于 Java 程序中的 this）；
-exception：封装页面抛出异常的对象。
+1. request：封装客户端的请求，其中包含来自 get 或 post 请求的参数；
+2. response：封装服务器对客户端的响应；
+3. pageContext：通过该对象可以获取其他对象；
+4. session：封装用户会话的对象；
+5. application：封装服务器运行环境的对象；
+6. out：输出服务器响应的输出流对象；
+7. config：Web 应用的配置对象；
+8. page：JSP 页面本身（相当于 Java 程序中的 this）；
+9. exception：封装页面抛出异常的对象。
 
 #### 66、说一下 JSP 的 4 种作用域？
 
-page：代表与一个页面相关的对象和属性。
-request：代表与客户端发出的一个请求相关的对象和属性。一个请求可能跨越多个页面，涉及多个 Web 组件；需要在页面显示的临时数据可以置于此作用域。
-session：代表与某个用户与服务器建立的一次会话相关的对象和属性。跟某个用户相关的数据应该放在用户自己的 session 中。
-application：代表与整个 Web 应用程序相关的对象和属性，它实质上是跨越整个 Web 应用程序，包括多个页面、请求和会话的一个全局作用域。
+1. page：代表与一个页面相关的对象和属性。
+2. request：代表与客户端发出的一个请求相关的对象和属性。一个请求可能跨越多个页面，涉及多个 Web 组件；需要在页面显示的临时数据可以置于此作用域。
+3. session：代表与某个用户与服务器建立的一次会话相关的对象和属性。跟某个用户相关的数据应该放在用户自己的 session 中。
+4. application：代表与整个 Web 应用程序相关的对象和属性，它实质上是跨越整个 Web 应用程序，包括多个页面、请求和会话的一个全局作用域。
 
 #### 67、session 和 cookie 有什么区别？
 
-存储位置不同：session 存储在服务器端；cookie 存储在浏览器端。
-安全性不同：cookie 安全性一般，在浏览器存储，可以被伪造和修改。
-容量和个数限制：cookie 有容量限制，每个站点下的 cookie 也有个数限制。
-存储的多样性：session 可以存储在 Redis 中、数据库中、应用程序中；而 cookie 只能存储在浏览器中。
+- 存储位置不同：session 存储在服务器端；cookie 存储在浏览器端。
+- 安全性不同：cookie 安全性一般，在浏览器存储，可以被伪造和修改。
+- 容量和个数限制：cookie 有容量限制，每个站点下的 cookie 也有个数限制。
+- 存储的多样性：session 可以存储在 Redis 中、数据库中、应用程序中；而 cookie 只能存储在浏览器中。
 
 #### 68、说一下 session 的工作原理？
 
@@ -657,15 +675,26 @@ session 的工作原理是客户端登录完成之后，服务器会创建对应
 
 #### 70、spring mvc 和 struts 的区别是什么？
 
-拦截级别：struts2 是类级别的拦截；spring mvc 是方法级别的拦截。
-数据独立性：spring mvc 的方法之间基本上独立的，独享 request 和 response 数据，请求数据通过参数获取，处理结果通过 ModelMap 交回给框架，方法之间不共享变量；而 struts2 虽然方法之间也是独立的，但其所有 action 变量是共享的，这不会影响程序运行，却给我们编码和读程序时带来了一定的麻烦。
-拦截机制：struts2 有以自己的 interceptor 机制，spring mvc 用的是独立的 aop 方式，这样导致struts2 的配置文件量比 spring mvc 大。
-对 ajax 的支持：spring mvc 集成了ajax，所有 ajax 使用很方便，只需要一个注解 @ResponseBody 就可以实现了；而 struts2 一般需要安装插件或者自己写代码才行。
+- 拦截级别：
+
+  struts2 是类级别的拦截；spring mvc 是方法级别的拦截。
+
+- 数据独立性：
+
+  spring mvc 的方法之间基本上独立的，独享 request 和 response 数据，请求数据通过参数获取，处理结果通过 ModelMap 交回给框架，方法之间不共享变量；而 struts2 虽然方法之间也是独立的，但其所有 action 变量是共享的，这不会影响程序运行，却给我们编码和读程序时带来了一定的麻烦。
+
+- 拦截机制：
+
+  struts2 有以自己的 interceptor 机制，spring mvc 用的是独立的 aop 方式，这样导致struts2 的配置文件量比 spring mvc 大。
+
+- 对 ajax 的支持：
+
+  spring mvc 集成了ajax，所有 ajax 使用很方便，只需要一个注解 @ResponseBody 就可以实现了；而 struts2 一般需要安装插件或者自己写代码才行。
 
 #### 71、如何避免 SQL 注入？
 
-使用预处理 PreparedStatement。
-使用正则表达式过滤掉字符中的特殊字符。
+- 使用预处理 PreparedStatement
+- 使用正则表达式过滤掉字符中的特殊字符
 
 #### 72、什么是 XSS 攻击，如何避免？
 
@@ -679,16 +708,16 @@ CSRF：Cross-Site Request Forgery（中文：跨站请求伪造），可以理�
 
 防御手段：
 
-验证请求来源地址；
-关键操作添加验证码；
-在请求地址添加 token 并验证。
+- 验证请求来源地址
+- 关键操作添加验证码
+- 在请求地址添加 token 并验证
 
 ###  异常
 
 #### 74、throw 和 throws 的区别？
 
- throw：是真实抛出一个异常。
- throws：是声明可能会抛出一个异常。
+throw：是真实抛出一个异常。
+throws：是声明可能会抛出一个异常。
 
 #### 75、final、finally、finalize 有什么区别？
 
@@ -706,33 +735,35 @@ try-catch-finally 其中 catch 和 finally 都可以被省略，但是不能同�
 
 #### 78、常见的异常类有哪些？
 
- NullPointerException 空指针异常
- ClassNotFoundException 指定类不存在
- NumberFormatException 字符串转换为数字异常
- IndexOutOfBoundsException 数组下标越界异常
- ClassCastException 数据类型转换异常
- FileNotFoundException 文件未找到异常
- NoSuchMethodException 方法不存在异常
- IOException IO 异常
- SocketException Socket 异常
+- NullPointerException 空指针异常
+- ClassNotFoundException 指定类不存在
+- NumberFormatException 字符串转换为数字异常
+- IndexOutOfBoundsException 数组下标越界异常
+- ClassCastException 数据类型转换异常
+- FileNotFoundException 文件未找到异常
+- NoSuchMethodException 方法不存在异常
+- IOException IO 异常
+- SocketException Socket 异常
 
 ###  网络
 
 #### 79、http 响应码 301 和 302 代表的是什么？有什么区别？
 
-301：永久重定向。
+301：永久重定向；302：暂时重定向。
 
-302：暂时重定向。
+它们的区别是：
 
-它们的区别是，301 对搜索引擎优化（SEO）更加有利；302 有被提示为网络拦截的风险。
+- 301 对搜索引擎优化（SEO）更加有利
+
+- 302 有被提示为网络拦截的风险
 
 #### 80、forward 和 redirect 的区别？
 
-forward 是转发 和 redirect 是重定向：
+- forward 是转发 和 redirect 是重定向
 
-地址栏 url 显示：foward url 不会发生改变，redirect url 会发生改变；
-数据共享：forward 可以共享 request 里的数据，redirect 不能共享；
-效率：forward 比 redirect 效率高。
+- 地址栏 url 显示：foward url 不会发生改变，redirect url 会发生改变
+- 数据共享：forward 可以共享 request 里的数据，redirect 不能共享
+- 效率：forward 比 redirect 效率高
 
 #### 81、简述 tcp 和 udp的区别？
 
@@ -740,10 +771,10 @@ tcp 和 udp 是 OSI 模型中的运输层中的协议。tcp 提供可靠的通�
 
 两者的区别大致如下：
 
-tcp 面向连接，udp 面向非连接即发送数据前不需要建立链接；
-tcp 提供可靠的服务（数据传输），udp 无法保证；
-tcp 面向字节流，udp 面向报文；
-tcp 数据传输慢，udp 数据传输快；
+- tcp 面向连接，udp 面向非连接即发送数据前不需要建立链接；
+- tcp 提供可靠的服务（数据传输），udp 无法保证；
+- tcp 面向字节流，udp 面向报文；
+- tcp 数据传输慢，udp 数据传输快；
 
 #### 82、tcp 为什么要三次握手，两次不行吗？为什么？
 
@@ -753,24 +784,24 @@ tcp 数据传输慢，udp 数据传输快；
 
 tcp 粘包可能发生在发送端或者接收端，分别来看两端各种产生粘包的原因：
 
-发送端粘包：发送端需要等缓冲区满才发送出去，造成粘包；
-接收方粘包：接收方不及时接收缓冲区的包，造成多个包接收。
+- 发送端粘包：发送端需要等缓冲区满才发送出去，造成粘包
+- 接收方粘包：接收方不及时接收缓冲区的包，造成多个包接收
 
 #### 84、OSI 的七层模型都有哪些？
 
-物理层：利用传输介质为数据链路层提供物理连接，实现比特流的透明传输。
-数据链路层：负责建立和管理节点间的链路。
-网络层：通过路由选择算法，为报文或分组通过通信子网选择最适当的路径。
-传输层：向用户提供可靠的端到端的差错和流量控制，保证报文的正确传输。
-会话层：向两个实体的表示层提供建立和使用连接的方法。
-表示层：处理用户信息的表示问题，如编码、数据格式转换和加密解密等。
-应用层：直接向用户提供服务，完成用户希望在网络上完成的各种工作。
+1. 物理层：利用传输介质为数据链路层提供物理连接，实现比特流的透明传输。
+2. 数据链路层：负责建立和管理节点间的链路。
+3. 网络层：通过路由选择算法，为报文或分组通过通信子网选择最适当的路径。
+4. 传输层：向用户提供可靠的端到端的差错和流量控制，保证报文的正确传输。
+5. 会话层：向两个实体的表示层提供建立和使用连接的方法。
+6. 表示层：处理用户信息的表示问题，如编码、数据格式转换和加密解密等。
+7. 应用层：直接向用户提供服务，完成用户希望在网络上完成的各种工作。
 
 #### 85、get 和 post 请求有哪些区别？
 
-get 请求会被浏览器主动缓存，而 post 不会。
-get 传递参数有大小限制，而 post 没有。
-post 参数传输更安全，get 的参数会明文限制在 url 上，post 不会。
+- get 请求会被浏览器主动缓存，而 post 不会。
+- get 传递参数有大小限制，而 post 没有。
+- post 参数传输更安全，get 的参数会明文限制在 url 上，post 不会。
 
 #### 86、如何实现跨域？
 
@@ -788,12 +819,12 @@ jsonp：JSON with Padding，它是利用script标签的 src 连接可以访问�
 
 #### 88、说一下你熟悉的设计模式？
 
-单例模式：保证被创建一次，节省系统开销。
-工厂模式（简单工厂、抽象工厂）：解耦代码。
-观察者模式：定义了对象之间的一对多的依赖，这样一来，当一个对象改变时，它的所有的依赖者都会收到通知并自动更新。
-外观模式：提供一个统一的接口，用来访问子系统中的一群接口，外观定义了一个高层的接口，让子系统更容易使用。
-模版方法模式：定义了一个算法的骨架，而将一些步骤延迟到子类中，模版方法使得子类可以在不改变算法结构的情况下，重新定义算法的步骤。
-状态模式：允许对象在内部状态改变时改变它的行为，对象看起来好像修改了它的类。
+- 单例模式：保证被创建一次，节省系统开销。
+- 工厂模式（简单工厂、抽象工厂）：解耦代码。
+- 观察者模式：定义了对象之间的一对多的依赖，这样一来，当一个对象改变时，它的所有的依赖者都会收到通知并自动更新。
+- 外观模式：提供一个统一的接口，用来访问子系统中的一群接口，外观定义了一个高层的接口，让子系统更容易使用。
+- 模版方法模式：定义了一个算法的骨架，而将一些步骤延迟到子类中，模版方法使得子类可以在不改变算法结构的情况下，重新定义算法的步骤。
+- 状态模式：允许对象在内部状态改变时改变它的行为，对象看起来好像修改了它的类。
 
 #### 89、简单工厂和抽象工厂有什么区别？
 
@@ -805,10 +836,10 @@ jsonp：JSON with Padding，它是利用script标签的 src 连接可以访问�
 
 #### 90、为什么要使用 spring？
 
-spring 提供 ioc 技术，容器会帮你管理依赖的对象，从而不需要自己创建和管理依赖对象了，更轻松的实现了程序的解耦。
-spring 提供了事务支持，使得事务操作变的更加方便。
-spring 提供了面向切片编程，这样可以更方便的处理某一类的问题。
-更方便的框架集成，spring 可以很方便的集成其他框架，比如 MyBatis、hibernate 等。
+- spring 提供 ioc 技术，容器会帮你管理依赖的对象，从而不需要自己创建和管理依赖对象了，更轻松的实现了程序的解耦。
+- spring 提供了事务支持，使得事务操作变的更加方便。
+- spring 提供了面向切片编程，这样可以更方便的处理某一类的问题。
+  更方便的框架集成，spring 可以很方便的集成其他框架，比如 MyBatis、hibernate 等。
 
 #### 91、解释一下什么是 aop？
 
@@ -824,12 +855,12 @@ ioc：Inversionof Control（中文：控制反转）是 spring 的核心，对�
 
 #### 93、spring 有哪些主要模块？
 
-spring core：框架的最基础部分，提供 ioc 和依赖注入特性。
-spring context：构建于 core 封装包基础上的 context 封装包，提供了一种框架式的对象访问方法。
-spring dao：Data Access Object 提供了JDBC的抽象层。
-spring aop：提供了面向切面的编程实现，让你可以自定义拦截器、切点等。
-spring Web：提供了针对 Web 开发的集成特性，例如文件上传，利用 servlet listeners 进行 ioc 容器初始化和针对 Web 的 ApplicationContext。
-spring Web mvc：spring 中的 mvc 封装包提供了 Web 应用的 Model-View-Controller（MVC）的实现。
+- spring core：框架的最基础部分，提供 ioc 和依赖注入特性。
+- spring context：构建于 core 封装包基础上的 context 封装包，提供了一种框架式的对象访问方法。
+- spring dao：Data Access Object 提供了JDBC的抽象层。
+- spring aop：提供了面向切面的编程实现，让你可以自定义拦截器、切点等。
+- spring Web：提供了针对 Web 开发的集成特性，例如文件上传，利用 servlet listeners 进行 ioc 容器初始化和针对 Web 的 ApplicationContext。
+- spring Web mvc：spring 中的 mvc 封装包提供了 Web 应用的 Model-View-Controller（MVC）的实现。
 
 #### 94、spring 常用的注入方式有哪些？
 
@@ -850,12 +881,13 @@ spring 中的 bean 默认是单例模式，spring 框架并没有对单例 bean 
 
 spring 支持 5 种作用域，如下：
 
-singleton：spring ioc 容器中只存在一个 bean 实例，bean 以单例模式存在，是系统默认值；
-prototype：每次从容器调用 bean 时都会创建一个新的示例，既每次 getBean()相当于执行 new Bean()操作；
-Web 环境下的作用域：
-request：每次 http 请求都会创建一个 bean；
-session：同一个 http session 共享一个 bean 实例；
-global-session：用于 portlet 容器，因为每个 portlet 有单独的 session，globalsession 提供一个全局性的 http session。
+1. singleton：spring ioc 容器中只存在一个 bean 实例，bean 以单例模式存在，是系统默认值；
+2. prototype：每次从容器调用 bean 时都会创建一个新的示例，既每次 getBean()相当于执行 new Bean()操作；
+   Web 环境下的作用域：
+3. request：每次 http 请求都会创建一个 bean；
+4. session：同一个 http session 共享一个 bean 实例；
+5. global-session：用于 portlet 容器，因为每个 portlet 有单独的 session，globalsession 提供一个全局性的 http session。
+
 注意： 使用 prototype 作用域需要慎重的思考，因为频繁创建和销毁 bean 会带来很大的性能开销。
 
 #### 97、spring 自动装配 bean 有哪些方式？
@@ -893,12 +925,14 @@ ISOLATION_SERIALIZABLE：序列化，代价最高最可靠的隔离级别，该�
 
 #### 100、说一下 spring mvc 运行流程？
 
-spring mvc 先将请求发送给 DispatcherServlet。
-DispatcherServlet 查询一个或多个 HandlerMapping，找到处理请求的 Controller。
-DispatcherServlet 再把请求提交到对应的 Controller。
-Controller 进行业务逻辑处理后，会返回一个ModelAndView。
-Dispathcher 查询一个或多个 ViewResolver 视图解析器，找到 ModelAndView 对象指定的视图对象。
-视图对象负责渲染返回给客户端。
+1. spring mvc 先将请求发送给 DispatcherServlet。
+2. DispatcherServlet 查询一个或多个 HandlerMapping，找到处理请求的 Controller。
+3. DispatcherServlet 再把请求提交到对应的 Controller。
+4. Controller 进行业务逻辑处理后，会返回一个ModelAndView。
+5. Dispathcher 查询一个或多个 ViewResolver 视图解析器，找到 ModelAndView 对象指定的视图对象。
+6. 视图对象负责渲染返回给客户端。
+
+![](E:\vuepress-blog\docs\.vuepress\public\images\springmvc.jpeg)
 
 #### 101、spring mvc 有哪些组件？
 
@@ -1011,19 +1045,19 @@ Integer 类型为对象，它的值允许为 null，而 int 属于基础数据�
 
 #### 119、hibernate 是如何工作的？
 
-读取并解析配置文件。
-读取并解析映射文件，创建 SessionFactory。
-打开 Session。
-创建事务。
-进行持久化操作。
-提交事务。
-关闭 Session。
-关闭 SessionFactory。
+1. 读取并解析配置文件。
+2. 读取并解析映射文件，创建 SessionFactory。
+3. 打开 Session。
+4. 创建事务。
+5. 进行持久化操作。
+6. 提交事务。
+7. 关闭 Session。
+8. 关闭 SessionFactory。
 
 #### 120、get()和 load()的区别？
 
-数据查询时，没有 OID 指定的对象，get() 返回 null；load() 返回一个代理对象。
-load()支持延迟加载；get() 不支持延迟加载。
+- 数据查询时，没有 OID 指定的对象，get() 返回 null；load() 返回一个代理对象。
+- load()支持延迟加载；get() 不支持延迟加载。
 
 #### 121、说一下 hibernate 的缓存机制？
 
@@ -1276,11 +1310,14 @@ RabbitMQ 对集群的停止的顺序是有要求的，应该先关闭内存节�
 
 ####  152、kafka 可以脱离 zookeeper 单独使用吗？为什么？
 
-kafka 不能脱离 zookeeper 单独使用，因为 kafka 使用 zookeeper 管理和协调 kafka 的节点服务器。
+kafka不能脱离 zookeeper 单独使用，因为 kafka 使用 zookeeper 管理和协调 kafka 的节点服务器。
 
 #### 153、kafka 有几种数据保留的策略？
 
-kafka 有两种数据保存策略：按照过期时间保留和按照存储的消息大小保留。
+kafka有两种数据保存策略：
+
+1. 按照过期时间保留
+2. 按照存储的消息大小保留
 
 #### 154、kafka 同时设置了 7 天和 10G 清除数据，到第五天的时候消息达到了 10G，这个时候 kafka 将如何处理？
 
@@ -1288,9 +1325,9 @@ kafka 有两种数据保存策略：按照过期时间保留和按照存储的�
 
 #### 155、什么情况会导致 kafka 运行变慢？
 
-cpu 性能瓶颈
-磁盘读写瓶颈
-网络瓶颈
+- cpu 性能瓶颈
+- 磁盘读写瓶颈
+- 网络瓶颈
 
 #### 156、使用 kafka 集群需要注意什么？
 
@@ -1305,10 +1342,10 @@ zookeeper 是一个分布式的，开放源码的分布式应用程序协调服�
 
 #### 158、zookeeper 都有哪些功能？
 
-集群管理：监控节点存活状态、运行请求等。
-主节点选举：主节点挂掉了之后可以从备用的节点开始新一轮选主，主节点选举说的就是这个选举的过程，使用 zookeeper 可以协助完成这个过程。
-分布式锁：zookeeper 提供两种锁：独占锁、共享锁。独占锁即一次只能有一个线程使用资源，共享锁是读锁共享，读写互斥，即可以有多线线程同时读同一个资源，如果要使用写锁也只能有一个线程使用。zookeeper可以对分布式锁进行控制。
-命名服务：在分布式系统中，通过使用命名服务，客户端应用能够根据指定名字来获取资源或服务的地址，提供者等信息。
+1. 集群管理：监控节点存活状态、运行请求等。
+2. 主节点选举：主节点挂掉了之后可以从备用的节点开始新一轮选主，主节点选举说的就是这个选举的过程，使用 zookeeper 可以协助完成这个过程。
+3. 分布式锁：zookeeper 提供两种锁：独占锁、共享锁。独占锁即一次只能有一个线程使用资源，共享锁是读锁共享，读写互斥，即可以有多线线程同时读同一个资源，如果要使用写锁也只能有一个线程使用。zookeeper可以对分布式锁进行控制。
+4. 命名服务：在分布式系统中，通过使用命名服务，客户端应用能够根据指定名字来获取资源或服务的地址，提供者等信息。
 
 #### 159、zookeeper 有几种部署模式？
 
@@ -1354,10 +1391,10 @@ InnoDB 表只会把自增主键的最大 id 记录在内存中，所以重启之
 
 #### 167、说一下 ACID 是什么？
 
-Atomicity（原子性）：一个事务（transaction）中的所有操作，或者全部完成，或者全部不完成，不会结束在中间某个环节。事务在执行过程中发生错误，会被恢复Rollback）到事务开始前的状态，就像这个事务从来没有执行过一样。即，事务不可分割、不可约简。
-Consistency（一致性）：在事务开始之前和事务结束以后，数据库的完整性没有被破坏。这表示写入的资料必须完全符合所有的预设约束、触发器、级联回滚等。
-Isolation（隔离性）：数据库允许多个并发事务同时对其数据进行读写和修改的能力，隔离性可以防止多个事务并发执行时由于交叉执行而导致数据的不一致。事务隔离分为不同级别，包括读未提交（Read uncommitted）、读提交（read committed）、可重复读（repeatable read）和串行化（Serializable）。
-Durability（持久性）：事务处理结束后，对数据的修改就是永久的，即便系统故障也不会丢失。
+- Atomicity（原子性）：一个事务（transaction）中的所有操作，或者全部完成，或者全部不完成，不会结束在中间某个环节。事务在执行过程中发生错误，会被恢复Rollback）到事务开始前的状态，就像这个事务从来没有执行过一样。即，事务不可分割、不可约简。
+- Consistency（一致性）：在事务开始之前和事务结束以后，数据库的完整性没有被破坏。这表示写入的资料必须完全符合所有的预设约束、触发器、级联回滚等。
+- Isolation（隔离性）：数据库允许多个并发事务同时对其数据进行读写和修改的能力，隔离性可以防止多个事务并发执行时由于交叉执行而导致数据的不一致。事务隔离分为不同级别，包括读未提交（Read uncommitted）、读提交（read committed）、可重复读（repeatable read）和串行化（Serializable）。
+- Durability（持久性）：事务处理结束后，对数据的修改就是永久的，即便系统故障也不会丢失。
 
 #### 168、char 和 varchar 的区别是什么？
 
@@ -1394,25 +1431,32 @@ explain 语法：explain select * from table where type=1。
 
 MySQL 的事务隔离是在 MySQL. ini 配置文件里添加的，在文件的最后添加：
 
+```in
 transaction-isolation = REPEATABLE-READ
+```
 
-可用的配置值：READ-UNCOMMITTED、READ-COMMITTED、REPEATABLE-READ、SERIALIZABLE。
+> 可用的配置值：READ-UNCOMMITTED、READ-COMMITTED、REPEATABLE-READ、SERIALIZABLE。
 
-READ-UNCOMMITTED：未提交读，最低隔离级别、事务未提交前，就可被其他事务读取（会出现幻读、脏读、不可重复读）。
- READ-COMMITTED：提交读，一个事务提交后才能被其他事务读取到（会造成幻读、不可重复读）。
- REPEATABLE-READ：可重复读，默认级别，保证多次读取同一个数据时，其值都和事务开始时候的内容是一致，禁止读取到别的事务未提交的数据（会造成幻读）。
- SERIALIZABLE：序列化，代价最高最可靠的隔离级别，该隔离级别能防止脏读、不可重复读、幻读。
- 脏读 ：表示一个事务能够读取另一个事务中还未提交的数据。比如，某个事务尝试插入记录 A，此时该事务还未提交，然后另一个事务尝试读取到了记录 A。
+1. READ-UNCOMMITTED：未提交读，最低隔离级别、事务未提交前，就可被其他事务读取（会出现幻读、脏读、不可重复读）。
+2. READ-COMMITTED：提交读，一个事务提交后才能被其他事务读取到（会造成幻读、不可重复读）。
+3. REPEATABLE-READ：可重复读，默认级别，保证多次读取同一个数据时，其值都和事务开始时候的内容是一致，禁止读取到别的事务未提交的数据（会造成幻读）。
+4. SERIALIZABLE：序列化，代价最高最可靠的隔离级别，该隔离级别能防止脏读、不可重复读、幻读。
 
-不可重复读 ：是指在一个事务内，多次读同一数据。
+- 脏读 ：表示一个事务能够读取另一个事务中还未提交的数据。比如，某个事务尝试插入记录 A，此时该事务还未提交，然后另一个事务尝试读取到了记录 A。
 
-幻读 ：指同一个事务内多次查询返回的结果集不一样。比如同一个事务 A 第一次查询时候有 n 条记录，但是第二次同等条件下查询却有 n+1 条记录，这就好像产生了幻觉。发生幻读的原因也是另外一个事务新增或者删除或者修改了第一个事务结果集里面的数据，同一个记录的数据内容被修改了，所有数据行的记录就变多或者变少了。
+- 不可重复读 ：是指在一个事务内，多次读同一数据。
+
+- 幻读 ：指同一个事务内多次查询返回的结果集不一样。比如同一个事务 A 第一次查询时候有 n 条记录，但是第二次同等条件下查询却有 n+1 条记录，这就好像产生了幻觉。发生幻读的原因也是另外一个事务新增或者删除或者修改了第一个事务结果集里面的数据，同一个记录的数据内容被修改了，所有数据行的记录就变多或者变少了。
 
 #### 174、说一下 MySQL 常用的引擎？
 
-InnoDB 引擎：InnoDB 引擎提供了对数据库 acid 事务的支持，并且还提供了行级锁和外键的约束，它的设计的目标就是处理大数据容量的数据库系统。MySQL 运行的时候，InnoDB 会在内存中建立缓冲池，用于缓冲数据和索引。但是该引擎是不支持全文搜索，同时启动也比较的慢，它是不会保存表的行数的，所以当进行 select count(*) from table 指令的时候，需要进行扫描全表。由于锁的粒度小，写操作是不会锁定全表的,所以在并发度较高的场景下使用会提升效率的。
+- InnoDB 引擎
 
-MyIASM 引擎：MySQL 的默认引擎，但不提供事务的支持，也不支持行级锁和外键。因此当执行插入和更新语句时，即执行写操作的时候需要锁定这个表，所以会导致效率会降低。不过和 InnoDB 不同的是，MyIASM 引擎是保存了表的行数，于是当进行 select count(*) from table 语句时，可以直接的读取已经保存的值而不需要进行扫描全表。所以，如果表的读操作远远多于写操作时，并且不需要事务的支持的，可以将 MyIASM 作为数据库引擎的首选。
+  InnoDB 引擎提供了对数据库 acid 事务的支持，并且还提供了行级锁和外键的约束，它的设计的目标就是处理大数据容量的数据库系统。MySQL 运行的时候，InnoDB 会在内存中建立缓冲池，用于缓冲数据和索引。但是该引擎是不支持全文搜索，同时启动也比较的慢，它是不会保存表的行数的，所以当进行 select count(*) from table 指令的时候，需要进行扫描全表。由于锁的粒度小，写操作是不会锁定全表的,所以在并发度较高的场景下使用会提升效率的。
+
+- MyIASM 引擎
+
+  MySQL 的默认引擎，但不提供事务的支持，也不支持行级锁和外键。因此当执行插入和更新语句时，即执行写操作的时候需要锁定这个表，所以会导致效率会降低。不过和 InnoDB 不同的是，MyIASM 引擎是保存了表的行数，于是当进行 select count(*) from table 语句时，可以直接的读取已经保存的值而不需要进行扫描全表。所以，如果表的读操作远远多于写操作时，并且不需要事务的支持的，可以将 MyIASM 作为数据库引擎的首选。
 
 #### 175、说一下 MySQL 的行锁和表锁？
 
@@ -1423,9 +1467,9 @@ MyISAM 只支持表锁，InnoDB 支持表锁和行锁，默认为行锁。
 
 ####  176、说一下乐观锁和悲观锁？
 
-乐观锁：每次去拿数据的时候都认为别人不会修改，所以不会上锁，但是在提交更新的时候会判断一下在此期间别人有没有去更新这个数据。
-悲观锁：每次去拿数据的时候都认为别人会修改，所以每次在拿数据的时候都会上锁，这样别人想拿这个数据就会阻止，直到这个锁被释放。
-数据库的乐观锁需要自己实现，在表里面添加一个 version 字段，每次修改成功值加 1，这样每次修改的时候先对比一下，自己拥有的 version 和数据库现在的 version 是否一致，如果不一致就不修改，这样就实现了乐观锁。
+- 乐观锁：每次去拿数据的时候都认为别人不会修改，所以不会上锁，但是在提交更新的时候会判断一下在此期间别人有没有去更新这个数据。
+- 悲观锁：每次去拿数据的时候都认为别人会修改，所以每次在拿数据的时候都会上锁，这样别人想拿这个数据就会阻止，直到这个锁被释放。
+  数据库的乐观锁需要自己实现，在表里面添加一个 version 字段，每次修改成功值加 1，这样每次修改的时候先对比一下，自己拥有的 version 和数据库现在的 version 是否一致，如果不一致就不修改，这样就实现了乐观锁。
 
 #### 177、MySQL 问题排查都有哪些手段？
 
@@ -1455,11 +1499,11 @@ Redis 使用场景：
 
 #### 180、Redis 有哪些功能？
 
-数据缓存功能
-分布式锁的功能
-支持数据持久化
-支持事务
-支持消息队列
+1. 数据缓存功能
+2. 分布式锁的功能
+3. 支持数据持久化
+4. 支持事务
+5. 支持消息队列
 
 #### 181、Redis 和 memcache 有什么区别？
 
@@ -1594,42 +1638,42 @@ Java 堆（Java Heap）：Java 虚拟机中内存最大的一块，是被所有�
 
 类加载分为以下 5 个步骤：
 
-加载：根据查找路径找到相应的 class 文件然后导入；
-检查：检查加载的 class 文件的正确性；
-准备：给类中的静态变量分配内存空间；
-解析：虚拟机将常量池中的符号引用替换成直接引用的过程。符号引用就理解为一个标示，而在直接引用直接指向内存中的地址；
-初始化：对静态变量和静态代码块执行初始化工作。
+1. 加载：根据查找路径找到相应的 class 文件然后导入；
+2. 检查：检查加载的 class 文件的正确性；
+3. 准备：给类中的静态变量分配内存空间；
+4. 解析：虚拟机将常量池中的符号引用替换成直接引用的过程。符号引用就理解为一个标示，而在直接引用直接指向内存中的地址；
+5. 初始化：对静态变量和静态代码块执行初始化工作。
 
 #### 200、怎么判断对象是否可以被回收？
 
  一般有两种方法来判断：
 
-引用计数器：为每个对象创建一个引用计数，有对象引用时计数器 +1，引用被释放时计数 -1，当计数器为 0 时就可以被回收。它有一个缺点不能解决循环引用的问题；
-可达性分析：从 GC Roots 开始向下搜索，搜索所走过的路径称为引用链。当一个对象到 GC Roots 没有任何引用链相连时，则证明此对象是可以被回收的。
+1. 引用计数器：为每个对象创建一个引用计数，有对象引用时计数器 +1，引用被释放时计数 -1，当计数器为 0 时就可以被回收。它有一个缺点不能解决循环引用的问题；
+2. 可达性分析：从 GC Roots 开始向下搜索，搜索所走过的路径称为引用链。当一个对象到 GC Roots 没有任何引用链相连时，则证明此对象是可以被回收的。
 
 ####  201、Java 中都有哪些引用类型？
 
-强引用：发生 gc 的时候不会被回收。
-软引用：有用但不是必须的对象，在发生内存溢出之前会被回收。
-弱引用：有用但不是必须的对象，在下一次GC时会被回收。
-虚引用（幽灵引用/幻影引用）：无法通过虚引用获得对象，用 PhantomReference 实现虚引用，虚引用的用途是在 gc 时返回一个通知。
+1. 强引用：发生 gc 的时候不会被回收。
+2. 软引用：有用但不是必须的对象，在发生内存溢出之前会被回收。
+3. 弱引用：有用但不是必须的对象，在下一次GC时会被回收。
+4. 虚引用（幽灵引用/幻影引用）：无法通过虚引用获得对象，用 PhantomReference 实现虚引用，虚引用的用途是在 gc 时返回一个通知。
 
 #### 202、说一下 JVM 有哪些垃圾回收算法？
 
-标记-清除算法：标记无用对象，然后进行清除回收。缺点：效率不高，无法清除垃圾碎片。
-标记-整理算法：标记无用对象，让所有存活的对象都向一端移动，然后直接清除掉端边界以外的内存。
-复制算法：按照容量划分二个大小相等的内存区域，当一块用完的时候将活着的对象复制到另一块上，然后再把已使用的内存空间一次清理掉。缺点：内存使用率不高，只有原来的一半。
-分代算法：根据对象存活周期的不同将内存划分为几块，一般是新生代和老年代，新生代基本采用复制算法，老年代采用标记整理算法。
+1. 标记-清除算法：标记无用对象，然后进行清除回收。缺点：效率不高，无法清除垃圾碎片。
+2. 标记-整理算法：标记无用对象，让所有存活的对象都向一端移动，然后直接清除掉端边界以外的内存。
+3. 复制算法：按照容量划分二个大小相等的内存区域，当一块用完的时候将活着的对象复制到另一块上，然后再把已使用的内存空间一次清理掉。缺点：内存使用率不高，只有原来的一半。
+4. 分代算法：根据对象存活周期的不同将内存划分为几块，一般是新生代和老年代，新生代基本采用复制算法，老年代采用标记整理算法。
 
 ####  203、说一下 JVM 有哪些垃圾回收器？
 
-Serial：最早的单线程串行垃圾回收器。
-Serial Old：Serial 垃圾回收器的老年版本，同样也是单线程的，可以作为 CMS 垃圾回收器的备选预案。
-ParNew：是 Serial 的多线程版本。
-Parallel 和 ParNew 收集器类似是多线程的，但 Parallel 是吞吐量优先的收集器，可以牺牲等待时间换取系统的吞吐量。
-Parallel Old 是 Parallel 老生代版本，Parallel 使用的是复制的内存回收算法，Parallel Old 使用的是标记-整理的内存回收算法。
-CMS：一种以获得最短停顿时间为目标的收集器，非常适用 B/S 系统。
-G1：一种兼顾吞吐量和停顿时间的 GC 实现，是 JDK 9 以后的默认 GC 选项。
+- Serial：最早的单线程串行垃圾回收器。
+- Serial Old：Serial 垃圾回收器的老年版本，同样也是单线程的，可以作为 CMS 垃圾回收器的备选预案。
+- ParNew：是 Serial 的多线程版本。
+- Parallel 和 ParNew 收集器类似是多线程的，但 Parallel 是吞吐量优先的收集器，可以牺牲等待时间换取系统的吞吐量。
+- Parallel Old 是 Parallel 老生代版本，Parallel 使用的是复制的内存回收算法，Parallel Old 使用的是标记-整理的内存回收算法。
+- CMS：一种以获得最短停顿时间为目标的收集器，非常适用 B/S 系统。
+- G1：一种兼顾吞吐量和停顿时间的 GC 实现，是 JDK 9 以后的默认 GC 选项。
 
 #### 204、详细介绍一下 CMS 垃圾回收器？
 
@@ -1639,10 +1683,13 @@ CMS 使用的是标记-清除的算法实现的，所以在 gc 的时候回产�
 
 #### 205、新生代垃圾回收器和老生代垃圾回收器都有哪些？有什么区别？
 
- 新生代回收器：Serial、ParNew、Parallel Scavenge
- 老年代回收器：Serial Old、Parallel Old、CMS
- 整堆回收器：G1
- 新生代垃圾回收器一般采用的是复制算法，复制算法的优点是效率高，缺点是内存利用率低；老年代回收器一般采用的是标记-整理的算法进行垃圾回收。
+- 新生代回收器：Serial、ParNew、Parallel Scavenge
+-  老年代回收器：Serial Old、Parallel Old、CMS
+-  整堆回收器：G1
+
+新生代垃圾回收器一般采用的是复制算法，复制算法的优点是效率高，缺点是内存利用率低
+
+老年代回收器一般采用的是标记-整理的算法进行垃圾回收
 
 #### 206、简述分代垃圾回收器是怎么工作的？
 
@@ -1661,17 +1708,17 @@ From Survivor 和 To Survivor 分区交换，From Survivor 变 To Survivor，To 
 
 JDK 自带了很多监控工具，都位于 JDK 的 bin 目录下，其中最常用的是 jconsole 和 jvisualvm 这两款视图监控工具。
 
-jconsole：用于对 JVM 中的内存、线程和类等进行监控；
-jvisualvm：JDK 自带的全能分析工具，可以分析：内存快照、线程快照、程序死锁、监控内存的变化、gc 变化等。
+- jconsole：用于对 JVM 中的内存、线程和类等进行监控；
+- jvisualvm：JDK 自带的全能分析工具，可以分析：内存快照、线程快照、程序死锁、监控内存的变化、gc 变化等。
 
 #### 208、常用的 JVM 调优的参数都有哪些？
 
-Xms2g：初始化推大小为 2g；
-Xmx2g：堆最大内存为 2g；
-XX:NewRatio=4：设置年轻的和老年代的内存比例为 1:4；
-XX:SurvivorRatio=8：设置新生代 Eden 和 Survivor 比例为 8:2；
-XX:+UseParNewGC：指定使用 ParNew + Serial Old 垃圾回收器组合；
-XX:+UseParallelOldGC：指定使用 ParNew + ParNew Old 垃圾回收器组合；
-XX:+UseConcMarkSweepGC：指定使用 CMS + Serial Old 垃圾回收器组合；
-XX:+PrintGC：开启打印 gc 信息；
-XX:+PrintGCDetails：打印 gc 详细信息。
+- Xms2g：初始化堆大小为 2g；
+- Xmx2g：堆最大内存为 2g；
+- XX:NewRatio=4：设置年轻的和老年代的内存比例为 1:4；
+- XX:SurvivorRatio=8：设置新生代 Eden 和 Survivor 比例为 8:2；
+- XX:+UseParNewGC：指定使用 ParNew + Serial Old 垃圾回收器组合；
+- XX:+UseParallelOldGC：指定使用 ParNew + ParNew Old 垃圾回收器组合；
+- XX:+UseConcMarkSweepGC：指定使用 CMS + Serial Old 垃圾回收器组合；
+- XX:+PrintGC：开启打印 gc 信息；
+- XX:+PrintGCDetails：打印 gc 详细信息。
