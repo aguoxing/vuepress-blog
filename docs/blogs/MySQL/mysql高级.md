@@ -123,13 +123,13 @@ mysql解析器将使用mysql语法规则验证和解析查询；预处理器则�
 
 - 看你的mysql现在已提供什么存储引擎
 
-  ```mysql
+  ```sql
   show engines
   ```
 
 - 看你的mysql当前默认的存储引擎
 
-  ```mysql
+  ```sql
   show variables like '%storage_engine%'
   ```
 
@@ -208,7 +208,7 @@ Federated引擎是访问其他MySQL服务器的一个代理，尽管该引擎看
 
 #### 手写
 
-```mysql
+```sql
 SELECT DISTINCT
 <select_list>
 FROM
@@ -227,7 +227,7 @@ LIMIT <limit_number>
 
 #### 机读
 
-```mysql
+```sql
 FROM <left_table>
 ON <join_condition>
 <join_type> JOIN <right_table>
@@ -250,7 +250,7 @@ LIMIT <limit_number>
 
 ### 建表SQL
 
-```mysql
+```sql
 CREATE TABLE `t_dept` ( `id` INT(11) NOT NULL AUTO_INCREMENT, `deptName` VARCHAR(30) DEFAULT NULL, `address` VARCHAR(40) DEFAULT NULL, PRIMARY KEY (`id`)) ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8; CREATE TABLE `t_emp` ( `id` INT(11) NOT NULL AUTO_INCREMENT, `name` VARCHAR(20) DEFAULT NULL,  `age` INT(3) DEFAULT NULL, `deptId` INT(11) DEFAULT NULL, PRIMARY KEY (`id`), KEY `fk_dept_id` (`deptId`) #CONSTRAINT `fk_dept_id` FOREIGN KEY (`deptId`) REFERENCES `t_dept` (`id`)) ENGINE=INNODB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;   INSERT INTO t_dept(deptName,address) VALUES('华山','华山');INSERT INTO t_dept(deptName,address) VALUES('丐帮','洛阳');INSERT INTO t_dept(deptName,address) VALUES('峨眉','峨眉山');INSERT INTO t_dept(deptName,address) VALUES('武当','武当山');INSERT INTO t_dept(deptName,address) VALUES('明教','光明顶'); INSERT INTO t_dept(deptName,address) VALUES('少林','少林寺'); INSERT INTO t_emp(NAME,age,deptId) VALUES('风清扬',90,1);INSERT INTO t_emp(NAME,age,deptId) VALUES('岳不群',50,1);INSERT INTO t_emp(NAME,age,deptId) VALUES('令狐冲',24,1);  INSERT INTO t_emp(NAME,age,deptId) VALUES('洪七公',70,2);INSERT INTO t_emp(NAME,age,deptId) VALUES('乔峰',35,2); INSERT INTO t_emp(NAME,age,deptId) VALUES('灭绝师太',70,3);INSERT INTO t_emp(NAME,age,deptId) VALUES('周芷若',20,3);   INSERT INTO t_emp(NAME,age,deptId) VALUES('张三丰',100,4); INSERT INTO t_emp(NAME,age,deptId) VALUES('张无忌',25,5); INSERT INTO t_emp(NAME,age,deptId) VALUES('韦小宝',18,null); 
 ```
 
@@ -258,31 +258,31 @@ CREATE TABLE `t_dept` ( `id` INT(11) NOT NULL AUTO_INCREMENT, `deptName` VARCHAR
 
 1. A、B两表共有
 
-   ```mysql
+   ```sql
    select * from t_emp a inner join t_dept b on a.deptId = b.id;
    ```
 
 2. A、B两表共有+A的独有
 
-   ```mysql
+   ```sql
    select * from t_emp a left join t_dept b on a.deptId = b.id;
    ```
 
 3. A、B两表共有+B的独有
 
-   ```mysql
+   ```sql
    select * from t_emp a right join t_dept b on a.deptId = b.id;
    ```
 
 4. A的独有
 
-   ```mysql
+   ```sql
    select * from t_emp a left join t_dept b on a.deptId = b.id where b.id is null;
    ```
 
 5. B的独有
 
-   ```mysql
+   ```sql
    select * from t_emp a right join t_dept b on a.deptId = b.id where a.deptId is null;
    ```
 
@@ -292,7 +292,7 @@ CREATE TABLE `t_dept` ( `id` INT(11) NOT NULL AUTO_INCREMENT, `deptName` VARCHAR
 
    left join + union(可去除重复数据)+ right join
 
-   ```mysql
+   ```sql
    SELECT * FROM t_emp A LEFT JOIN t_dept B ON A.deptId = B.idUNIONSELECT * FROM t_emp A RIGHT JOIN t_dept B ON A.deptId = B.id
    ```
 
@@ -300,13 +300,13 @@ CREATE TABLE `t_dept` ( `id` INT(11) NOT NULL AUTO_INCREMENT, `deptName` VARCHAR
 
 7. A的独有+B的独有
 
-   ```
+   ```sql
    select  * FROM t_emp A LEFT JOIN t_dept B ON A.deptId = B.id WHERE B.`id` IS NULLUNIONSELECT * FROM t_emp A RIGHT JOIN t_dept B ON A.deptId = B.id WHERE A.`deptId` IS NULL;
    ```
 
 #### 添加掌门字段
 
-```mysql
+```sql
 ALTER TABLE `t_dept` add CEO INT(11);
 update t_dept set CEO=2 where id=1;
 update t_dept set CEO=4 where id=2;update t_dept set CEO=6 where id=3;
@@ -339,7 +339,7 @@ select avg(a.age) from t_emp a inner join t_dept b on a.id=b.CEO;
 
    b. 根据t_emp 对应的 deptId 关联子查询表查询出所有人物对应的 ceo
 
-```mysql
+```sql
 SELECT a.name,f.deptName,f.name FROM t_emp a LEFT JOIN (SELECT d.`id`,e.`name` ,d.`deptName` FROM t_dept dLEFT JOIN t_emp e ON d.`CEO`=e.`id`) fON a.deptId = f.id
 ```
 
@@ -349,7 +349,7 @@ SELECT a.name,f.deptName,f.name FROM t_emp a LEFT JOIN (SELECT d.`id`,e.`name` ,
 
    b. 通过门派的 ceo 关联对应的掌门
 
-```mysql
+```sql
 SELECT e.`name`, d.`deptName`,f.`name` ceo FROM t_dept d RIGHT JOIN t_emp e ON d.`id` = e.`deptId`
 ```
 
@@ -357,7 +357,7 @@ a. 得到关联了部门的一张新的联合表LEFT JOIN t_emp f  ON d.`CEO`=f.
 
 b. 第二步 --->通过新的联合表中的数据与另一张表关联
 
-```mysql
+```sql
 SELECT d.`deptName`, e.`name` CEO,d.`id`,f.name FROM t_dept d LEFT JOIN t_emp e
 ```
 
@@ -447,7 +447,7 @@ R-Tree在mysql很少使用，仅支持geometry数据类型，支持该类型的�
 
 - 语法
 
-  ```mysql
+  ```sql
   # 随表一起建索引
   CREATE TABLE customer (id INT(10) UNSIGNED AUTO_INCREMENT ,customer_no VARCHAR(200),customer_name VARCHAR(200), PRIMARY KEY(id) );
   
@@ -470,7 +470,7 @@ R-Tree在mysql很少使用，仅支持geometry数据类型，支持该类型的�
 
 - 语法
 
-```mysql
+```sql
 # 随表一起建索引
 CREATE TABLE customer (id INT(10) UNSIGNED  AUTO_INCREMENT,customer_no VARCHAR(200),customer_name VARCHAR(200),PRIMARY KEY(id),KEY (customer_name));
 
@@ -484,7 +484,7 @@ DROP INDEX idx_customer_name;
 
 - 索引列的值必须唯一，但允许有空值
 
-```mysql
+```sql
 # 随表一起建索引
 CREATE TABLE customer (id INT(10) UNSIGNED  AUTO_INCREMENT,customer_no
 VARCHAR(200),customer_name VARCHAR(200),PRIMARY KEY(id),KEY (customer_name),UNIQUE (customer_no));
@@ -503,7 +503,7 @@ DROP INDEX idx_customer_no on customer;
 
 - 语法
 
-```mysql
+```sql
 # 随表一起建索引
 CREATE TABLE customer (id INT(10) UNSIGNED AUTO_INCREMENT,customer_no VARCHAR(200),customer_name VARCHAR(200),PRIMARY KEY(id), KEY (customer_name), UNIQUE (customer_name),KEY (customer_no,customer_name));
 # 单独建索引
@@ -516,13 +516,13 @@ DROP INDEX idx_no_name  on customer;
 
 - 创建
 
-  ```mysql
+  ```sql
   ALTER mytable ADD  [UNIQUE ]  INDEX [indexName] ON (columnname(length)) 
   ```
 
 - 删除
 
-  ```mysql
+  ```sql
   DROP INDEX [indexName] ON mytable;
   ```
 
@@ -536,7 +536,7 @@ DROP INDEX idx_no_name  on customer;
 
   针对同一个复合索引 按照创建复合索引时的顺序进行排序collation:cardinality:sub_part:packed:Null:是否允许 null 值comment:index_comment:
 
-  ```mysql
+  ```sql
   SHOW INDEX FROM table_name
   ```
 
@@ -544,7 +544,7 @@ DROP INDEX idx_no_name  on customer;
 
   有四种方式来添加数据表的索引
 
-  ```mysql
+  ```sql
   # 该语句添加一个主键，这意味着索引值必须是唯一的，且不能为NULL。
   ALTER TABLE tbl_name ADD PRIMARY KEY (column_list)
   
@@ -668,7 +668,7 @@ explain+SQL语句
 
  type显示的是访问类型，是较为重要的一个指标，结果值从最好到最坏依次是：
 
-```mysql
+```sql
 system > const > eq_ref > ref > fulltext > ref_or_null > index_merge > unique_subquery > index_subquery > range(尽量保证) > index > ALL   system>const>eq_ref>ref>range>index>ALL 
 ```
 
@@ -694,7 +694,7 @@ system > const > eq_ref > ref > fulltext > ref_or_null > index_merge > unique_su
 
 #### 建表SQL
 
-```mysql
+```sql
 CREATE TABLE IF NOT EXISTS `article` (`id` INT(10) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,`author_id` INT(10) UNSIGNED NOT NULL,`category_id` INT(10) UNSIGNED NOT NULL,`views` INT(10) UNSIGNED NOT NULL,`comments` INT(10) UNSIGNED NOT NULL,`title` VARBINARY(255) NOT NULL,`content` TEXT NOT NULL);INSERT INTO `article`(`author_id`, `category_id`, `views`, `comments`, `title`, `content`) VALUES(1, 1, 1, 1, '1', '1'),(2, 2, 2, 2, '2', '2'),(1, 1, 3, 3, '3', '3');SELECT * FROM article;
 ```
 
@@ -702,7 +702,7 @@ CREATE TABLE IF NOT EXISTS `article` (`id` INT(10) UNSIGNED NOT NULL PRIMARY KEY
 
 查询 category_id 为1 且 comments 大于1 的情况下,views最多的 article_id
 
-```mysql
+```sql
 EXPLAIN SELECT id,author_id FROM article WHERE category_id = 1 AND comments > 1 ORDER BY views DESC LIMIT 1;
 ```
 
@@ -712,7 +712,7 @@ EXPLAIN SELECT id,author_id FROM article WHERE category_id = 1 AND comments > 1 
 
 新建索引+删除索引
 
-```mysql
+```sql
 ALTER TABLE `article` ADD INDEX idx_article_ccv (`category_id` , `comments`, `views` );
 create index idx_article_ccv on article(category_id,comments,views);
 DROP INDEX idx_article_ccv ON article 
@@ -720,7 +720,7 @@ DROP INDEX idx_article_ccv ON article
 
 再次查询
 
-```mysql
+```sql
 EXPLAIN SELECT id,author_id FROM `article` WHERE category_id = 1 AND comments >1 ORDER BY views DESC LIMIT 1;
 ```
 
@@ -735,20 +735,20 @@ MySQL 无法利用索引再对后面的 views 部分进行检索,即 range 类�
 
 删除第一次建立的索引
 
-```mysql
+```sql
 DROP INDEX idx_article_ccv ON article;
 ```
 
 第2次新建索引
 
-```mysql
+```sql
 ALTER TABLE `article` ADD INDEX idx_article_cv ( `category_id` , `views` );
 create index idx_article_cv on article(category_id,views);
 ```
 
 第3次EXPLAIN
 
-```mysql
+```sql
 EXPLAIN SELECT id,author_id FROM article WHERE category_id = 1 AND comments > 1 ORDER BY views DESC LIMIT 1;
 ```
 
@@ -760,7 +760,7 @@ DROP INDEX idx_article_cv ON article;
 
 #### 建表SQL
 
-```mysql
+```sql
 CREATE TABLE IF NOT EXISTS `class` (`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,`card` INT(10) UNSIGNED NOT NULL,PRIMARY KEY (`id`));CREATE TABLE IF NOT EXISTS `book` (`bookid` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,`card` INT(10) UNSIGNED NOT NULL,PRIMARY KEY (`bookid`));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO class(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20)));INSERT INTO book(card) VALUES(FLOOR(1 + (RAND() * 20))); 
 ```
 
@@ -776,13 +776,13 @@ EXPLAIN SELECT * FROM class LEFT JOIN book ON class.card = book.card;
 
 添加索引优化
 
-```mysql
+```sql
 ALTER TABLE `book` ADD INDEX Y ( `card`); 
 ```
 
 第2次explain
 
-```mysql
+```sql
 EXPLAIN SELECT * FROM class LEFT JOIN book ON class.card = book.card;
 ```
 
@@ -794,7 +794,7 @@ EXPLAIN SELECT * FROM class LEFT JOIN book ON class.card = book.card;
 
 删除旧索引 + 新建 + 第3次explain
 
-```mysql
+```sql
 DROP INDEX Y ON book;
 ALTER TABLE class ADD INDEX X (card);
 EXPLAIN SELECT * FROM class LEFT JOIN book ON class.card = book.card;  
@@ -816,7 +816,7 @@ EXPLAIN SELECT * FROM class LEFT JOIN book ON class.card = book.card;
 
 - 子查询尽量不要放在被驱动表，有可能使用不到索引
 
-  ```mysql
+  ```sql
   select a.name ,bc.name from t_emp a left join  (select b.id , c.name from t_dept b inner join t_emp c on b.ceo = c.id)bc on bc.id = a.deptid
   ```
 
@@ -824,7 +824,7 @@ EXPLAIN SELECT * FROM class LEFT JOIN book ON class.card = book.card;
 
   肯定会进行全表扫描上段查询 可以直接使用两个 left join 优化
 
-  ```mysql
+  ```sql
   select a.name , c.name from t_emp a left outer join t_dept b on a.deptid = b.id left outer join t_emp c on b.ceo=c.id
   ```
 
@@ -838,20 +838,20 @@ EXPLAIN SELECT * FROM class LEFT JOIN book ON class.card = book.card;
 
  有索引 大表驱动小表
 
-```mysql
+```sql
 select sql_no_cache sum(sal) from emp where deptno in (select deptno from dept);
 select sql_no_cache sum(sal) from emp where exists (select 1 from dept where emp.deptno=dept.deptno);
 ```
 
 用 exists 是否存在，存在返回一条记录，exists 是作为一个查询判断用，所以 select 后返回什么不重要。
 
-```mysql
+```sql
 select sql_no_cache sum(sal) from emp inner join dept on emp.deptno=dept.deptno;
 ```
 
 有索引 小表驱动大表
 
-```mysql
+```sql
 select sql_no_cache sum(e.sal) from (select * from emp where id<10000) e where exists (select 1 from emp where e.deptno=emp.deptno);
 select sql_no_cache sum(e.sal) from (select * from emp where id<10000) e inner join (select distinct deptno from emp) m on m.deptno=e.deptno;
 select sql_no_cache sum(sal) from emp where deptno in (select deptno from dept);
@@ -861,14 +861,14 @@ select sql_no_cache sum(sal) from emp where deptno in (select deptno from dept);
 
 无索引 小表驱动大表
 
-```mysql
+```sql
 select sql_no_cache sum(e.sal) from (select * from emp where id<10000) e where exists (select 1 from emp where e.deptno=emp.deptno);select sql_no_cache sum(e.sal) from (select * from emp where id<10000) e inner join (select distinct deptno from emp) m on m.deptno=e.deptno;
 select sql_no_cache sum(sal) from emp where deptno in (select deptno from dept);
 ```
 
 无索引 大表驱动小表
 
-```mysql
+```sql
 select sql_no_cache sum(sal) from emp where deptno in (select deptno from dept);
 select sql_no_cache sum(sal) from emp where exists (select 1 from dept where emp.deptno=dept.deptno);
 select sql_no_cache sum(sal) from emp inner join dept on emp.deptno=dept.deptno;
@@ -886,7 +886,7 @@ select sql_no_cache sum(sal) from emp inner join dept on emp.deptno=dept.deptno;
 
 ##### 建表
 
-```mysql
+```sql
 CREATE TABLE tblA(  id int primary key not null auto_increment,  age INT,  birth TIMESTAMP NOT NULL,  name varchar(200)); INSERT INTO tblA(age,birth,name) VALUES(22,NOW(),'abc');
 INSERT INTO tblA(age,birth,name) VALUES(23,NOW(),'bcd');
 INSERT INTO tblA(age,birth,name) VALUES(24,NOW(),'def');
@@ -960,7 +960,7 @@ FileSort方式效率较低
 
 ### 分页查询优化（limit）
 
-```mysql
+```sql
 EXPLAIN   SELECT SQL_NO_CACHE * FROM emp ORDER BY deptno  LIMIT 10000,40
 ```
 
@@ -970,7 +970,7 @@ EXPLAIN   SELECT SQL_NO_CACHE * FROM emp ORDER BY deptno  LIMIT 10000,40
 
 先利用覆盖索引把要取的数据行的主键取到，然后再用这个主键列与数据表做关联：(查询的数据量小了后)
 
-```mysql
+```sql
 EXPLAIN SELECT SQL_NO_CACHE * FROM emp INNER JOIN (SELECT id FROM emp e ORDER BY deptno LIMIT 10000,40) a ON a.id=emp.id
 ```
 
@@ -1009,7 +1009,7 @@ EXPLAIN SELECT SQL_NO_CACHE * FROM emp INNER JOIN (SELECT id FROM emp e ORDER BY
    | 6    | 3      | 重庆         |
    | 8    | 8      | 天津         |
 
-   ```mysql
+   ```sql
    # 将产生重复数据
    select kcdz form t_mall_sku where id in( 3,4,5,6,8 )
    
