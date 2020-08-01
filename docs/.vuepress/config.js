@@ -49,7 +49,8 @@ module.exports = {
         collapsable: true,
         children: [
           '/blogs/Java/java经典练习题',
-          '/blogs/Java/java面试题'
+          '/blogs/Java/java面试题',
+		  '/blogs/Java/尚硅谷Java面试题-1'
         ]
       },
       {
