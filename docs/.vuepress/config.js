@@ -140,6 +140,7 @@ module.exports = {
         collapsable: true,
         children: [
           '/blogs/Windows/notepad++',
+		  '/blogs/Windows/win系统安装'
         ]
       },
       {
