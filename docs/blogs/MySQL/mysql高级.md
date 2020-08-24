@@ -1022,6 +1022,26 @@ EXPLAIN SELECT SQL_NO_CACHE * FROM emp INNER JOIN (SELECT id FROM emp e ORDER BY
 
 # 查询截取分析
 
+## 慢查询日志
+
+### 是什么？
+
+MySQL的慢查询日志是MySQL提供的一种日志记录，它用来记录在MySQL中响应时间超过阀值的语句，具体指运行时间超过long_query_time值的SQL，则会被记录到慢查询日志中。 具体指运行时间超过long_query_time值的SQL，则会被记录到慢查询日志中。long_query_time的默认值为10，意思是运行10秒以上的语句。 由他来查看哪些SQL超出了我们的最大忍耐时间值，比如一条sql执行超过5秒钟，我们就算慢SQL，希望能收集超过5秒的sql，结合之前explain进行全面分析。 
+
+### 怎么用？
+
+#### 说明
+
+#### 查看是否开启及如何开启
+
+#### 开启慢查询后，什么样的SQL才会记录到慢查询日志里面？
+
+### 案例
+
+
+
+### 日志分析工具mysqldumpslow
+
 # MySQL锁机制
 
 # 主从复制
