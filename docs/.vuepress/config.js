@@ -82,7 +82,7 @@ module.exports = {
         title: 'MySQL',
         collapsable: true,
         children: [
-          '/blogs/MySQL/50道mysql练习题',
+          '/blogs/MySQL/50道MySQL练习题',
 		  '/blogs/MySQL/MySQL常用语句',
 		  '/blogs/MySQL/MySQL高级'
         ]
