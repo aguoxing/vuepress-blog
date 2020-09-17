@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /images/2.jpg
-heroText: JavaDoc
+heroText: learndoc
 tagline: 难道我学过如来神掌也要说给你听吗？
 actionText: 我也想学 →
 actionLink: /blogs/
