@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'JavaDoc',
+  title: 'learncloud',
   description: 'Java程序员的自我修养',
   markdown: {
     lineNumbers: true
