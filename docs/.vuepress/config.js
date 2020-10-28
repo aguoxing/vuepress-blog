@@ -11,7 +11,7 @@ module.exports = {
     activeHeaderLinks: false, // 默认值：true
     nav: [
       { text: '首页', link: '/' },
-      { text: '文章', link: '/blogs/' },
+      { text: '文章', link: '/docs/' },
       { text: '关于', link: '/about/' },
       {
         text: '链接',
@@ -23,153 +23,153 @@ module.exports = {
       }
     ],
     sidebar: {
-      '/blogs/': [{
+      '/docs/': [{
         title: 'Docker',
         collapsable: true,
         children: [
-          '/blogs/Docker/docker',
+          '/docs/Docker/docker',
         ]
       },
       {
         title: 'Dubbo',
         collapsable: true,
         children: [
-          '/blogs/Dubbo/dubbo',
+          '/docs/Dubbo/dubbo',
         ]
       },
       {
         title: 'Git',
         collapsable: true,
         children: [
-          '/blogs/Git/git',
+          '/docs/Git/git',
         ]
       },
       {
         title: 'Java',
         collapsable: true,
         children: [
-		  '/blogs/Java/cron表达式',
-          '/blogs/Java/java经典练习题',
-          '/blogs/Java/java面试题',
-		  '/blogs/Java/尚硅谷Java面试题-1'
+		  '/docs/Java/cron表达式',
+          '/docs/Java/java经典练习题',
+          '/docs/Java/java面试题',
+		  '/docs/Java/尚硅谷Java面试题-1'
         ]
       },
       {
         title: 'Linux',
         collapsable: true,
         children: [
-          '/blogs/Linux/linux',
-          '/blogs/Linux/centos7',
-          '/blogs/Linux/vim'
+          '/docs/Linux/linux',
+          '/docs/Linux/centos7',
+          '/docs/Linux/vim'
         ]
       },
       {
         title: 'MQ',
         collapsable: true,
         children: [
-          '/blogs/MQ/消息队列',
+          '/docs/MQ/消息队列',
         ]
       },
       {
         title: 'MyBatis',
         collapsable: true,
         children: [
-          '/blogs/MyBatis/mybatis',
-          '/blogs/MyBatis/mybatis逆向工程'
+          '/docs/MyBatis/mybatis',
+          '/docs/MyBatis/mybatis逆向工程'
         ]
       },
       {
         title: 'MySQL',
         collapsable: true,
         children: [
-          '/blogs/MySQL/50道MySQL练习题',
-		  '/blogs/MySQL/MySQL常用语句',
-		  '/blogs/MySQL/MySQL高级'
+          '/docs/MySQL/50道MySQL练习题',
+		  '/docs/MySQL/MySQL常用语句',
+		  '/docs/MySQL/MySQL高级'
         ]
       },
       {
         title: 'Nginx',
         collapsable: true,
         children: [
-          '/blogs/Nginx/nginx',
+          '/docs/Nginx/nginx',
         ]
       },
       {
         title: 'Redis',
         collapsable: true,
         children: [
-          '/blogs/Redis/redis',
+          '/docs/Redis/redis',
         ]
       },
       {
         title: 'Spring',
         collapsable: true,
         children: [
-          '/blogs/Spring/spring',
+          '/docs/Spring/spring',
         ]
       },
       {
         title: 'Spring MVC',
         collapsable: true,
         children: [
-          '/blogs/Spring MVC/spring mvc',
+          '/docs/Spring MVC/spring mvc',
         ]
       },
       {
         title: 'SpringBoot',
         collapsable: true,
         children: [
-          '/blogs/SpringBoot/springboot',
+          '/docs/SpringBoot/springboot',
         ]
       },
       {
         title: 'SpringCloud',
         collapsable: true,
         children: [
-          '/blogs/SpringCloud/springcloud',
+          '/docs/SpringCloud/springcloud',
         ]
       },
 	  {
         title: 'Vue',
         collapsable: true,
         children: [
-          '/blogs/Vue/vue',
+          '/docs/Vue/vue',
         ]
       },
 	  {
         title: 'Windows',
         collapsable: true,
         children: [
-          '/blogs/Windows/notepad++',
-		  '/blogs/Windows/win系统安装'
+          '/docs/Windows/notepad++',
+		  '/docs/Windows/win系统安装'
         ]
       },
       {
         title: '其他',
         collapsable: true,
         children: [
-          '/blogs/其他/VIP视频解析接口',
+          '/docs/其他/VIP视频解析接口',
         ]
       },
 	  {
         title: 'Zookeeper',
         collapsable: true,
         children: [
-          '/blogs/Zookeeper/zookeeper分布式锁',
+          '/docs/Zookeeper/zookeeper分布式锁',
         ]
       },
       {
         title: '设计模式',
         collapsable: true,
         children: [
-          '/blogs/设计模式/23设计模式',
+          '/docs/设计模式/23设计模式',
         ]
       },
       {
         title: '数据结构与算法',
         collapsable: true,
         children: [
-          '/blogs/数据结构与算法/数据结构与算法',
+          '/docs/数据结构与算法/数据结构与算法',
         ]
       }]
     }
