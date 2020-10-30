@@ -4,7 +4,7 @@ heroImage: /images/2.jpg
 heroText: learndoc
 tagline: 难道我学过如来神掌也要说给你听吗？
 actionText: 我也想学 →
-actionLink: /blogs/
+actionLink: /docs/
 features:
 - title: 简洁至上
   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
