@@ -2,7 +2,7 @@
 home: true
 heroImage: /images/2.jpg
 heroText: learndoc
-tagline: 难道我学过如来神掌也要说给你听吗？
+tagline: I WANT SOMETHING JUST LIKE THIS❤
 actionText: 我也想学 →
 actionLink: /docs/
 features:
