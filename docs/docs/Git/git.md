@@ -81,3 +81,17 @@ ssh-keygen -t rsa -C "邮箱地址@qq.com"
 - refactor：重构（即不是新增功能，也不是修改bug的代码变动）
 - test：增加测试
 - chore：构建过程或辅助工具的变动
+
+
+
+
+
+```
+git config --global user.name "aguoxing"
+git config --global user.email "2922575030@qq.com"
+```
+
+```
+ssh-keygen -t rsa -C "2922575030@qq.com"
+```
+

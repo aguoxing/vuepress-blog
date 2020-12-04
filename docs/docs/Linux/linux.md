@@ -48,3 +48,21 @@ make install
 ln -s -f /usr/local/tar/bin/tar /usr/bin/
 ```
 
+
+
+
+
+
+
+### ssh连接长时间不操作断开连接问题
+
+```
+vim /etc/ssh/sshd_config
+
+# 找到ClientAliveCountMax 设置断开时间 单位为分钟
+ClientAliveCountMax 10
+
+# 立即生效
+service sshd reload
+```
+

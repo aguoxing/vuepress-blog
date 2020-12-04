@@ -3,7 +3,7 @@ home: true
 heroImage: /images/2.jpg
 heroText: learndoc
 tagline: I WANT SOMETHING JUST LIKE THIS❤
-actionText: 我也想学 →
+actionText: →
 actionLink: /docs/
 features:
 - title: 简洁至上

@@ -12,13 +12,13 @@ module.exports = {
     nav: [
       { text: '首页', link: '/' },
       { text: '文章', link: '/docs/' },
-      { text: '关于', link: '/about/' },
       {
-        text: '链接',
+        text: '关于',
         items: [
           { text: 'GitHub', link: 'https://github.com/aguoxing' },
           { text: 'Gitee', link: 'https://gitee.com/aguoxing' },
-          { text: 'QQ', link: 'http://sighttp.qq.com/authd?IDKEY=73a6878f272caac4245dce5ad8e38afa940eb94ca6128183' }
+          { text: 'QQ', link: 'http://sighttp.qq.com/authd?IDKEY=73a6878f272caac4245dce5ad8e38afa940eb94ca6128183' },
+          {text: '关于本站', link: '/about/'}
         ]
       }
     ],
@@ -83,8 +83,8 @@ module.exports = {
         collapsable: true,
         children: [
           '/docs/MySQL/50道MySQL练习题',
-		  '/docs/MySQL/MySQL常用语句',
-		  '/docs/MySQL/MySQL高级'
+		      '/docs/MySQL/MySQL常用语句',
+		      '/docs/MySQL/MySQL高级'
         ]
       },
       {
