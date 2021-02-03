@@ -4,100 +4,63 @@ title: 50道mysql练习题
 
 ### 建表
 
-- 学生表
-
 ```sql
-CREATE TABLE `Student`(
+CREATE TABLE `student`(
 `s_id` VARCHAR(20),
 `s_name` VARCHAR(20) NOT NULL DEFAULT '',
 `s_birth` VARCHAR(20) NOT NULL DEFAULT '',
 `s_sex` VARCHAR(10) NOT NULL DEFAULT '',
 PRIMARY KEY(`s_id`)
 );
-```
-
-- 课程表
-
-```sql
-CREATE TABLE `Course`(
+CREATE TABLE `course`(
 `c_id`  VARCHAR(20),
 `c_name` VARCHAR(20) NOT NULL DEFAULT '',
 `t_id` VARCHAR(20) NOT NULL,
 PRIMARY KEY(`c_id`)
 );
-```
-
-- 教师表
-
-```sql
-CREATE TABLE `Teacher`(
+CREATE TABLE `teacher`(
 `t_id` VARCHAR(20),
 `t_name` VARCHAR(20) NOT NULL DEFAULT '',
 PRIMARY KEY(`t_id`)
 );
-```
-
-- 成绩表
-
-```sql
-CREATE TABLE `Score`(
+CREATE TABLE `score`(
 `s_id` VARCHAR(20),
 `c_id`  VARCHAR(20),
 `s_score` INT(3),
 PRIMARY KEY(`s_id`,`c_id`)
 );
-```
-
-- 插入学生表测试数据
-
-```sql
-insert into Student values('01' , '赵雷' , '1990-01-01' , '男');
-insert into Student values('02' , '钱电' , '1990-12-21' , '男');
-insert into Student values('03' , '孙风' , '1990-05-20' , '男');
-insert into Student values('04' , '李云' , '1990-08-06' , '男');
-insert into Student values('05' , '周梅' , '1991-12-01' , '女');
-insert into Student values('06' , '吴兰' , '1992-03-01' , '女');
-insert into Student values('07' , '郑竹' , '1989-07-01' , '女');
-insert into Student values('08' , '王菊' , '1990-01-20' , '女');
-```
-
-- 课程表测试数据
-
-```sql
-insert into Course values('01' , '语文' , '02');
-insert into Course values('02' , '数学' , '01');
-insert into Course values('03' , '英语' , '03');
-```
-
-- 教师表测试数据
-
-```sql
-insert into Teacher values('01' , '张三');
-insert into Teacher values('02' , '李四');
-insert into Teacher values('03' , '王五');
-```
-
-- 成绩表测试数据
-
-```sql
-insert into Score values('01' , '01' , 80);
-insert into Score values('01' , '02' , 90);
-insert into Score values('01' , '03' , 99);
-insert into Score values('02' , '01' , 70);
-insert into Score values('02' , '02' , 60);
-insert into Score values('02' , '03' , 80);
-insert into Score values('03' , '01' , 80);
-insert into Score values('03' , '02' , 80);
-insert into Score values('03' , '03' , 80);
-insert into Score values('04' , '01' , 50);
-insert into Score values('04' , '02' , 30);
-insert into Score values('04' , '03' , 20);
-insert into Score values('05' , '01' , 76);
-insert into Score values('05' , '02' , 87);
-insert into Score values('06' , '01' , 31);
-insert into Score values('06' , '03' , 34);
-insert into Score values('07' , '02' , 89);
-insert into Score values('07' , '03' , 98);
+insert into student values('01' , '赵雷' , '1990-01-01' , '男');
+insert into student values('02' , '钱电' , '1990-12-21' , '男');
+insert into student values('03' , '孙风' , '1990-05-20' , '男');
+insert into student values('04' , '李云' , '1990-08-06' , '男');
+insert into student values('05' , '周梅' , '1991-12-01' , '女');
+insert into student values('06' , '吴兰' , '1992-03-01' , '女');
+insert into student values('07' , '郑竹' , '1989-07-01' , '女');
+insert into student values('08' , '王菊' , '1990-01-20' , '女');
+insert into course values('01' , '语文' , '02');
+insert into course values('02' , '数学' , '01');
+insert into course values('03' , '英语' , '03');
+insert into teacher values('01' , '张三');
+insert into teacher values('02' , '李四');
+insert into teacher values('03' , '王五');
+insert into score values('01' , '01' , 80);
+insert into score values('01' , '02' , 90);
+insert into score values('01' , '03' , 99);
+insert into score values('02' , '01' , 70);
+insert into score values('02' , '02' , 60);
+insert into score values('02' , '03' , 80);
+insert into score values('03' , '01' , 80);
+insert into score values('03' , '02' , 80);
+insert into score values('03' , '03' , 80);
+insert into score values('04' , '01' , 50);
+insert into score values('04' , '02' , 30);
+insert into score values('04' , '03' , 20);
+insert into score values('05' , '01' , 76);
+insert into score values('05' , '02' , 87);
+insert into score values('06' , '01' , 31);
+insert into score values('06' , '03' , 34);
+insert into score values('07' , '02' , 89);
+insert into score values('07' , '03' , 98);
 ```
 
 ### 练习题和sql语句
@@ -204,7 +167,7 @@ where a.s_id in (select s_id from score where c_id='01' ) and a.s_id not in(sele
 ```sql
 --@wendiepei的写法
 select s.* from student s 
-left join Score s1 on s1.s_id=s.s_id
+left join score s1 on s1.s_id=s.s_id
 group by s.s_id having count(s1.c_id)<(select count(*) from course)	
 --@k1051785839的写法
 select *
@@ -227,24 +190,24 @@ select distinct a.s_id from score a where a.c_id in(select a.c_id from score a w
 ```sql
 --@ouyang_1993的写法
 SELECT
- Student.*
+ student.*
 FROM
- Student
+ student
 WHERE
- s_id IN (SELECT s_id FROM Score GROUP BY s_id HAVING COUNT(s_id) = (
+ s_id IN (SELECT s_id FROM score GROUP BY s_id HAVING COUNT(s_id) = (
     #下面的语句是找到'01'同学学习的课程数
-    SELECT COUNT(c_id) FROM Score WHERE s_id = '01'
+    SELECT COUNT(c_id) FROM score WHERE s_id = '01'
    )
  )
 AND s_id NOT IN (
  #下面的语句是找到学过‘01’同学没学过的课程，有哪些同学。并排除他们
- SELECT s_id FROM Score
+ SELECT s_id FROM score
  WHERE c_id IN(
    #下面的语句是找到‘01’同学没学过的课程
-   SELECT DISTINCT c_id FROM Score
+   SELECT DISTINCT c_id FROM score
    WHERE c_id NOT IN (
      #下面的语句是找出‘01’同学学习的课程
-     SELECT c_id FROM Score WHERE s_id = '01'
+     SELECT c_id FROM score WHERE s_id = '01'
     )
   ) GROUP BY s_id
 ) #下面的条件是排除01同学
@@ -316,7 +279,7 @@ round(avg(s_score),2) as 平均分 from score a  GROUP BY a.s_id ORDER BY 平均
 SELECT a.s_id,MAX(CASE a.c_id WHEN '01' THEN a.s_score END ) 语文, 
 MAX(CASE a.c_id WHEN '02' THEN a.s_score END ) 数学, 
 MAX(CASE a.c_id WHEN '03' THEN a.s_score END ) 英语, 
-avg(a.s_score),b.s_name FROM Score a JOIN Student b ON a.s_id=b.s_id GROUP BY a.s_id ORDER BY 5 DESC
+avg(a.s_score),b.s_name FROM score a JOIN student b ON a.s_id=b.s_id GROUP BY a.s_id ORDER BY 5 DESC
 ```
 
 18. 查询各科成绩最高分、最低分和平均分：以如下形式显示：课程ID，课程name，最高分，最低分，平均分，及格率，中等率，优良率，优秀率

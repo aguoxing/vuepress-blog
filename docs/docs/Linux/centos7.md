@@ -632,7 +632,7 @@ docker images 查看本地镜像
 docker rm id/name 删除某个容器
 docker rmi id/name 删除某个镜像
 docker run --name test -ti ubuntu /bin/bash  复制ubuntu容器并且重命名为test且运行，然后以伪终端交互式方式进入容器，运行bash
-docker build -t soar/centos:7.1 .  通过当前目录下的Dockerfile创建一个名为soar/centos:7.1的镜像
+docker build -t image-name:0.1 .  通过当前目录下的Dockerfile创建一个名为image-name版本为0.1的镜像
 docker run -d -p 2222:22 --name test soar/centos:7.1  以镜像soar/centos:7.1创建名为test的容器，并以后台模式运行，并做端口映射到宿主机2222端口，P参数重启容器宿主机端口会发生改变
 ```
 
@@ -647,6 +647,11 @@ docker images
 docker tag IMAGEID(镜像id) REPOSITORY:TAG（仓库：标签）
 
 示例：docker tag 9f6c2e7c4ff7 39.97.191.230:5000/jdk1.8:1.8
+
+```
+docker run -d --restart=always --name allinone -p 8086:8086 allinone:0.1
+
+```
 
 
 
