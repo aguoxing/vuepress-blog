@@ -1,26 +1,26 @@
-# Éú³É¾²Ì¬ÎÄ¼ş
-# npm  run docs:build
+# ç”Ÿæˆé™æ€æ–‡ä»¶
+# npm run docs:build
 vuepress build docs
 
-# Éú³É¾²Ì¬ÎÄ¼şºóÏÈÍÆµ½master·ÖÖ§
+# ç”Ÿæˆé™æ€æ–‡ä»¶åå…ˆæ¨åˆ°masteråˆ†æ”¯
 git add -A
 git commit -m 'update'
 git push origin
 
-# ½øÈëÉú³ÉµÄÎÄ¼ş¼Ğ
+# è¿›å…¥ç”Ÿæˆçš„æ–‡ä»¶å¤¹
 cd docs/.vuepress/dist
 
-# Èç¹ûÊÇ·¢²¼µ½×Ô¶¨ÒåÓòÃû
-echo 'learncloud.top' > CNAME
+# å¦‚æœæ˜¯å‘å¸ƒåˆ°è‡ªå®šä¹‰åŸŸå
+# echo 'xx.com' > CNAME
 
 git init
 git add -A
-git commit -m 'deploy'
+git commit -m 'update'
 
-# Èç¹û·¢²¼µ½ https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
+# å¦‚æœå‘å¸ƒåˆ° https://<USERNAME>.github.io
+# git push -f git@gitee.com:<USERNAME>/<USERNAME>.gitee.io.git master
 
-# Èç¹û·¢²¼µ½ https://<USERNAME>.github.io/<REPO>
+# å¦‚æœå‘å¸ƒåˆ° https://<USERNAME>.github.io/<REPO>
 git push -f git@github.com:aguoxing/vuepress-blog.git master:gh-pages
 
 cd -
