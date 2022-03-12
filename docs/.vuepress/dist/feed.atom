@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://doc.cloudos.top</id>
+    <title>冬辰的博客</title>
+    <updated>2022-03-12T07:17:35.722Z</updated>
+    <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
+    <link rel="alternate" href="http://doc.cloudos.top"/>
+    <link rel="self" href="http://doc.cloudos.top/feed.atom"/>
+    <subtitle>冬辰的博客</subtitle>
+    <entry>
+        <title type="html"><![CDATA[关于本站]]></title>
+        <id>http://doc.cloudos.top/writings/2022/02/17/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99/</id>
+        <link href="http://doc.cloudos.top/writings/2022/02/17/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99/">
+        </link>
+        <updated>2022-02-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[关于本站，没啥好说的]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Kubernetes]]></title>
+        <id>http://doc.cloudos.top/writings/2022/02/19/kubernetes/</id>
+        <link href="http://doc.cloudos.top/writings/2022/02/19/kubernetes/">
+        </link>
+        <updated>2022-02-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Kubernetes...]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[持续集成CI环境搭建]]></title>
+        <id>http://doc.cloudos.top/writings/2022/02/19/%E6%90%AD%E5%BB%BA%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83/</id>
+        <link href="http://doc.cloudos.top/writings/2022/02/19/%E6%90%AD%E5%BB%BA%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83/">
+        </link>
+        <updated>2022-02-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[持续集成CI环境搭建...]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Docker]]></title>
+        <id>http://doc.cloudos.top/writings/2022/02/19/docker/</id>
+        <link href="http://doc.cloudos.top/writings/2022/02/19/docker/">
+        </link>
+        <updated>2022-02-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[docker...]]></summary>
+    </entry>
+</feed>
