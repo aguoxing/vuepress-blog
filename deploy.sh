@@ -1,6 +1,6 @@
 # 生成静态文件
-# npm run docs:build
-vuepress build docs
+ npm run docs:build
+#vuepress build docs
 
 # 生成静态文件后先推到master分支
 git add -A
