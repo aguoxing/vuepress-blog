@@ -52,10 +52,10 @@ module.exports = {
       endpoint: 'https://billyyyyy3320.us4.list-manage.com/subscribe/post?u=4905113ee00d8210c2004e038&amp;id=bd18d40138'
     },
     sitemap: {
-      hostname: 'http://doc.cloudos.top'
+      hostname: 'https://aguoxing.github.io/vuepress-blog/'
     },
     feed: {
-      canonical_base:'http://doc.cloudos.top',
+      canonical_base:'https://aguoxing.github.io/vuepress-blog/',
       rss:false,
       atom:true,
       json:false
@@ -83,7 +83,7 @@ module.exports = {
           tag: 'vuepress'
         },
         itemLayout: 'Writing', // 匹配页面的布局
-        itemPermalink: '/writings/:year/:month/:day/:slug', // 匹配页面的永久链接
+        itemPermalink: '/blog/:year/:month/:day/:slug', // 匹配页面的永久链接
         pagination: { // 分页行为
           prevText:'<<', // Text for previous links.
           nextText:'>>', // Text for next links.
@@ -135,7 +135,7 @@ module.exports = {
           link: 'https://policies.google.com/privacy?hl=en-US',
         },
         {
-          text: '© 2021-present doc.cloudos.top',
+          text: '© 2021-present gwoksing',
         },
       ],
       contact: [
