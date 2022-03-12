@@ -11,7 +11,7 @@ git push origin
 cd docs/.vuepress/dist
 
 # 如果是发布到自定义域名
-# echo 'xx.com' > CNAME
+ echo 'learncloud.top' > CNAME
 
 git init
 git add -A
