@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  base: '/vuepress-blog', // 设置站点根路径
   title: '冬辰的博客',
   description: '冬辰的博客',
   head: [
