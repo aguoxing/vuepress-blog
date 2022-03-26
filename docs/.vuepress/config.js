@@ -2,8 +2,8 @@ const path = require('path');
 
 module.exports = {
   base: '/vuepress-blog/', // 设置站点根路径
-  title: '冬辰的博客',
-  description: '冬辰的博客',
+  title: 'gwoksing-blog',
+  description: 'gwoksing-blog',
   head: [
     ['link', { rel: 'icon', href: '/images/logo.jpg' }], // 需要被注入到当前页面的 HTML <head> 中的标签
     /*'script', // 百度统计
@@ -49,15 +49,12 @@ module.exports = {
         link: '/abouts/',
       },
     ],
-    newsletter: {
-      endpoint: 'https://billyyyyy3320.us4.list-manage.com/subscribe/post?u=4905113ee00d8210c2004e038&amp;id=bd18d40138'
-    },
     sitemap: {
       hostname: 'https://aguoxing.github.io/vuepress-blog/'
     },
     feed: {
       canonical_base:'https://aguoxing.github.io/vuepress-blog/',
-      rss:false,
+      rss:true,
       atom:true,
       json:false
     },
@@ -65,14 +62,14 @@ module.exports = {
       serviceWorker: true,
       updatePopup: true
     },
-    comment: // Vssue
-    {
-      service: 'vssue',
-      owner: 'aguoxing',
-      repo: 'vuepress-blog',
-      clientId: 'Iv1.2e5bd8af44281072',
-      clientSecret: '93fdc99f4ba7cd37a8f8f991c3f6b6f68752f4dd',
-    },
+    // Vssue
+    // comment: {
+    //   service: 'vssue',
+    //   owner: 'aguoxing',
+    //   repo: 'vuepress-blog',
+    //   clientId: 'Iv1.2e5bd8af44281072',
+    //   clientSecret: '93fdc99f4ba7cd37a8f8f991c3f6b6f68752f4dd',
+    // },
     directories: [
       {
         id: 'post', // 当前分类器的唯一 ID
