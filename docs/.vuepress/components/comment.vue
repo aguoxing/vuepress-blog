@@ -13,8 +13,8 @@ export default {
   name: 'comment',
   mounted() {
     const commentConfig = {
-      clientID: 'Iv1.2e5bd8af44281072',
-      clientSecret: '404f2e969365be5eaa9ec93977f33b5e49b079fa',
+      clientID: '4d3d91affc5e32f8a5a1',
+      clientSecret: '6346c363b4c4b9c0a2b967c3623e3954fd508c02',
       repo: 'vuepress-blog',
       owner: 'aguoxing',
       admin: ['aguoxing'],
